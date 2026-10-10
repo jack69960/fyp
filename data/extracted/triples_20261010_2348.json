@@ -1,0 +1,5618 @@
+[
+  {
+    "method": "SGUID",
+    "task": "model-skill co-evolution",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12367v1",
+    "title": "Which Skill to Distill? SGUID: Selecting a Compact Skill Bank for Model-Skill Co-Evolution",
+    "topic": "opd"
+  },
+  {
+    "method": "SGUID",
+    "task": "model distillation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12367v1",
+    "title": "Which Skill to Distill? SGUID: Selecting a Compact Skill Bank for Model-Skill Co-Evolution",
+    "topic": "opd"
+  },
+  {
+    "method": "full-bank distillation",
+    "task": "model performance evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12367v1",
+    "title": "Which Skill to Distill? SGUID: Selecting a Compact Skill Bank for Model-Skill Co-Evolution",
+    "topic": "opd"
+  },
+  {
+    "method": "GPD",
+    "task": "spatial reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12355v1",
+    "title": "Distilling Routed 3D Privilege for Spatial Reasoning in Vision-Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "GRPO",
+    "task": "spatial reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12355v1",
+    "title": "Distilling Routed 3D Privilege for Spatial Reasoning in Vision-Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "answer-privileged OPSD",
+    "task": "spatial reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12355v1",
+    "title": "Distilling Routed 3D Privilege for Spatial Reasoning in Vision-Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "Knowledge distillation",
+    "task": "mathematical reasoning",
+    "dataset": "Omni-MATH-2",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12114v1",
+    "title": "Universal Textual Teaching for LLMs",
+    "topic": "opd"
+  },
+  {
+    "method": "Universal Textual Teaching (UTT",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12114v1",
+    "title": "Universal Textual Teaching for LLMs",
+    "topic": "opd"
+  },
+  {
+    "method": "Universal Textual Teaching (UTT",
+    "task": "code generation",
+    "dataset": "KernelBench",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12114v1",
+    "title": "Universal Textual Teaching for LLMs",
+    "topic": "opd"
+  },
+  {
+    "method": "MetaOPD",
+    "task": "on-policy distillation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11989v1",
+    "title": "MetaOPD: Meta-Learned Token Weighting for On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11989v1",
+    "title": "MetaOPD: Meta-Learned Token Weighting for On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "MetaOPD",
+    "task": "out-of-domain",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11989v1",
+    "title": "MetaOPD: Meta-Learned Token Weighting for On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "DIAL-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11659v1",
+    "title": "DIAL-OPD: Learning More from Fewer Tokens in On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "Vanilla OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11659v1",
+    "title": "DIAL-OPD: Learning More from Fewer Tokens in On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "full-token variants",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11659v1",
+    "title": "DIAL-OPD: Learning More from Fewer Tokens in On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "ReTeach",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11529v1",
+    "title": "ReTeach: Building a Self-Teacher through Multi-Round Reflection and Retry",
+    "topic": "opd"
+  },
+  {
+    "method": "self-distillation",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11529v1",
+    "title": "ReTeach: Building a Self-Teacher through Multi-Round Reflection and Retry",
+    "topic": "opd"
+  },
+  {
+    "method": "reflection",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11529v1",
+    "title": "ReTeach: Building a Self-Teacher through Multi-Round Reflection and Retry",
+    "topic": "opd"
+  },
+  {
+    "method": "Residual Advantage ( extRA",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11519v1",
+    "title": "Residual Advantage: Student-Relative Teacher Guidance for RL with Verifiable Rewards",
+    "topic": "opd"
+  },
+  {
+    "method": "LoRA",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11519v1",
+    "title": "Residual Advantage: Student-Relative Teacher Guidance for RL with Verifiable Rewards",
+    "topic": "opd"
+  },
+  {
+    "method": "verifiable rewards",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11519v1",
+    "title": "Residual Advantage: Student-Relative Teacher Guidance for RL with Verifiable Rewards",
+    "topic": "opd"
+  },
+  {
+    "method": "agentic reinforcement learning",
+    "task": "scientific research",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11451v1",
+    "title": "SAIL: Scientific Agentic Intelligence via a Science-Aware Loop",
+    "topic": "opd"
+  },
+  {
+    "method": "supervised fine-tuning",
+    "task": "scientific research",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11451v1",
+    "title": "SAIL: Scientific Agentic Intelligence via a Science-Aware Loop",
+    "topic": "opd"
+  },
+  {
+    "method": "multi-teacher on-policy distillation",
+    "task": "scientific research",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11451v1",
+    "title": "SAIL: Scientific Agentic Intelligence via a Science-Aware Loop",
+    "topic": "opd"
+  },
+  {
+    "method": "PAMA",
+    "task": "membership auditing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11423v1",
+    "title": "Policy Alignment: New Signals for Membership Auditing in On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "TAG",
+    "task": "membership auditing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11423v1",
+    "title": "Policy Alignment: New Signals for Membership Auditing in On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "On-policy distillation",
+    "task": "model training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11423v1",
+    "title": "Policy Alignment: New Signals for Membership Auditing in On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "ComCLIP",
+    "task": "fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11374v1",
+    "title": "Rethinking Contrastive Loss in CLIP Post-training: A Complementary Framework with Frozen Text Encoder",
+    "topic": "opd"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11374v1",
+    "title": "Rethinking Contrastive Loss in CLIP Post-training: A Complementary Framework with Frozen Text Encoder",
+    "topic": "opd"
+  },
+  {
+    "method": "distillation",
+    "task": "fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11374v1",
+    "title": "Rethinking Contrastive Loss in CLIP Post-training: A Complementary Framework with Frozen Text Encoder",
+    "topic": "opd"
+  },
+  {
+    "method": "SpatialOPSD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11366v1",
+    "title": "SpatialOPSD: Self-Distilling Spatial Intelligence from Verified Coding Agent Traces",
+    "topic": "opd"
+  },
+  {
+    "method": "GRPO",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11366v1",
+    "title": "SpatialOPSD: Self-Distilling Spatial Intelligence from Verified Coding Agent Traces",
+    "topic": "opd"
+  },
+  {
+    "method": "Repetition-Aware Distillation",
+    "task": "model training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11366v1",
+    "title": "SpatialOPSD: Self-Distilling Spatial Intelligence from Verified Coding Agent Traces",
+    "topic": "opd"
+  },
+  {
+    "method": "RECAL",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11332v1",
+    "title": "ReCal: Calibrating Structured Pruning for On-Policy Distillation Recovery",
+    "topic": "opd"
+  },
+  {
+    "method": "pruning",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11332v1",
+    "title": "ReCal: Calibrating Structured Pruning for On-Policy Distillation Recovery",
+    "topic": "opd"
+  },
+  {
+    "method": "forward KL",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11332v1",
+    "title": "ReCal: Calibrating Structured Pruning for On-Policy Distillation Recovery",
+    "topic": "opd"
+  },
+  {
+    "method": "Semi-OPD",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11291v1",
+    "title": "When Do We Need On-Policy Distillation? Distilling on Offline Student Rollouts Is Often Better",
+    "topic": "opd"
+  },
+  {
+    "method": "OPD",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11291v1",
+    "title": "When Do We Need On-Policy Distillation? Distilling on Offline Student Rollouts Is Often Better",
+    "topic": "opd"
+  },
+  {
+    "method": "student rollouts",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11291v1",
+    "title": "When Do We Need On-Policy Distillation? Distilling on Offline Student Rollouts Is Often Better",
+    "topic": "opd"
+  },
+  {
+    "method": "On-policy distillation (OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11247v1",
+    "title": "Why On-Policy Distillation Sometimes Fails: Vanishing Learning Signals",
+    "topic": "opd"
+  },
+  {
+    "method": "self-RL teachers",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11247v1",
+    "title": "Why On-Policy Distillation Sometimes Fails: Vanishing Learning Signals",
+    "topic": "opd"
+  },
+  {
+    "method": "loss plateaus",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11247v1",
+    "title": "Why On-Policy Distillation Sometimes Fails: Vanishing Learning Signals",
+    "topic": "opd"
+  },
+  {
+    "method": "PIVOT",
+    "task": "vertical-domain few-shot classification",
+    "dataset": "Banking77, HWU64",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11167v1",
+    "title": "PIVOT: Perplexity-Informed KD-to-RL Transition Scheduling for Vertical-Domain Few-Shot Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "On-Policy Distillation (OPD",
+    "task": "vertical-domain few-shot classification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11167v1",
+    "title": "PIVOT: Perplexity-Informed KD-to-RL Transition Scheduling for Vertical-Domain Few-Shot Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "GRPO-based reinforcement learning",
+    "task": "vertical-domain few-shot classification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11167v1",
+    "title": "PIVOT: Perplexity-Informed KD-to-RL Transition Scheduling for Vertical-Domain Few-Shot Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "Lapras",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11111v1",
+    "title": "Lapras: Latent Reasoning for Time Series Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "teacher-student self-distillation",
+    "task": "training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11111v1",
+    "title": "Lapras: Latent Reasoning for Time Series Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "Chain-of-Thought",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11111v1",
+    "title": "Lapras: Latent Reasoning for Time Series Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "STI-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10878v1",
+    "title": "Stochastic Teacher Intervention for Agentic On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "KL divergence",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10878v1",
+    "title": "Stochastic Teacher Intervention for Agentic On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "fixed-schedule approaches",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10878v1",
+    "title": "Stochastic Teacher Intervention for Agentic On-Policy Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "KDFP",
+    "task": "knowledge distillation in large language models",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10854v1",
+    "title": "KDFP: A first-principles approach to knowledge distillation in large language models",
+    "topic": "opd"
+  },
+  {
+    "method": "null",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10854v1",
+    "title": "KDFP: A first-principles approach to knowledge distillation in large language models",
+    "topic": "opd"
+  },
+  {
+    "method": "null",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10854v1",
+    "title": "KDFP: A first-principles approach to knowledge distillation in large language models",
+    "topic": "opd"
+  },
+  {
+    "method": "$$-MOPD",
+    "task": "math",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10460v1",
+    "title": "Composing What Each Teacher Learned: Multi-Teacher On-Policy Distillation through Teacher-Relative Shifts",
+    "topic": "opd"
+  },
+  {
+    "method": "endpoint composition",
+    "task": "math",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10460v1",
+    "title": "Composing What Each Teacher Learned: Multi-Teacher On-Policy Distillation through Teacher-Relative Shifts",
+    "topic": "opd"
+  },
+  {
+    "method": "teacher-relative shift",
+    "task": "math",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10460v1",
+    "title": "Composing What Each Teacher Learned: Multi-Teacher On-Policy Distillation through Teacher-Relative Shifts",
+    "topic": "opd"
+  },
+  {
+    "method": "Self-distillation methods",
+    "task": "Reinforcement Learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10447v1",
+    "title": "A Good Self-Teacher Meets the Student Where They Are: Joint On-Policy Learning and Teaching",
+    "topic": "opd"
+  },
+  {
+    "method": "Analysis",
+    "task": "Reinforcement Learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10447v1",
+    "title": "A Good Self-Teacher Meets the Student Where They Are: Joint On-Policy Learning and Teaching",
+    "topic": "opd"
+  },
+  {
+    "method": "Derivation",
+    "task": "Reinforcement Learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10447v1",
+    "title": "A Good Self-Teacher Meets the Student Where They Are: Joint On-Policy Learning and Teaching",
+    "topic": "opd"
+  },
+  {
+    "method": "EncBank",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10058v1",
+    "title": "Cache the Encoder Within:Compact, Reusable Memory across LLM Queries",
+    "topic": "opd"
+  },
+  {
+    "method": "self-distilled suffix adapter",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10058v1",
+    "title": "Cache the Encoder Within:Compact, Reusable Memory across LLM Queries",
+    "topic": "opd"
+  },
+  {
+    "method": "Qwen",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10058v1",
+    "title": "Cache the Encoder Within:Compact, Reusable Memory across LLM Queries",
+    "topic": "opd"
+  },
+  {
+    "method": "Knowledge Weaver",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10042v1",
+    "title": "Learning to Accumulate Knowledge with Mutual Information",
+    "topic": "opd"
+  },
+  {
+    "method": "Group Relative Policy Optimization (GRPO",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10042v1",
+    "title": "Learning to Accumulate Knowledge with Mutual Information",
+    "topic": "opd"
+  },
+  {
+    "method": "token-wise mutual information (MI",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10042v1",
+    "title": "Learning to Accumulate Knowledge with Mutual Information",
+    "topic": "opd"
+  },
+  {
+    "method": "MIRROR",
+    "task": "personalized generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09795v1",
+    "title": "MIRROR: From Imitation to Internalization in LLM Personalization",
+    "topic": "opd"
+  },
+  {
+    "method": "MIRROR-F",
+    "task": "personalized generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09795v1",
+    "title": "MIRROR: From Imitation to Internalization in LLM Personalization",
+    "topic": "opd"
+  },
+  {
+    "method": "self-distillation",
+    "task": "personalized generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09795v1",
+    "title": "MIRROR: From Imitation to Internalization in LLM Personalization",
+    "topic": "opd"
+  },
+  {
+    "method": "LoopOPD",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10623v1",
+    "title": "Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "D-LoopOPD",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10623v1",
+    "title": "Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10623v1",
+    "title": "Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "SAPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09665v1",
+    "title": "SAPD: Step-Aligned Privileged Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "self-distillation",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09665v1",
+    "title": "SAPD: Step-Aligned Privileged Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "supervised fine-tuning",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09665v1",
+    "title": "SAPD: Step-Aligned Privileged Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "On-policy distillation (OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09639v1",
+    "title": "On-Policy Distillation Teaches New Skills but Not New Knowledge",
+    "topic": "opd"
+  },
+  {
+    "method": "reverse-KL OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09639v1",
+    "title": "On-Policy Distillation Teaches New Skills but Not New Knowledge",
+    "topic": "opd"
+  },
+  {
+    "method": "forward KL",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09639v1",
+    "title": "On-Policy Distillation Teaches New Skills but Not New Knowledge",
+    "topic": "opd"
+  },
+  {
+    "method": "MIMESIS",
+    "task": "interactive agent training",
+    "dataset": "human conversations",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09484v2",
+    "title": "MIMESIS: Learning User Simulators as Training Environments for Interactive Agents",
+    "topic": "opd"
+  },
+  {
+    "method": "MIMESIS",
+    "task": "user simulator training",
+    "dataset": "real user interactions",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09484v2",
+    "title": "MIMESIS: Learning User Simulators as Training Environments for Interactive Agents",
+    "topic": "opd"
+  },
+  {
+    "method": "MIMESIS",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09484v2",
+    "title": "MIMESIS: Learning User Simulators as Training Environments for Interactive Agents",
+    "topic": "opd"
+  },
+  {
+    "method": "OnlineQAT",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09346v1",
+    "title": "OnlineQAT: On-Policy Distillation for Ultra-Low-Bit Large Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "Quantization-aware training",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09346v1",
+    "title": "OnlineQAT: On-Policy Distillation for Ultra-Low-Bit Large Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "on-policy distillation",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09346v1",
+    "title": "OnlineQAT: On-Policy Distillation for Ultra-Low-Bit Large Language Models",
+    "topic": "opd"
+  },
+  {
+    "method": "TAP",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09074v1",
+    "title": "TAP: Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery",
+    "topic": "opd"
+  },
+  {
+    "method": "on-policy recovery",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09074v1",
+    "title": "TAP: Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery",
+    "topic": "opd"
+  },
+  {
+    "method": "structural pruning",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09074v1",
+    "title": "TAP: Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery",
+    "topic": "opd"
+  },
+  {
+    "method": "Socio-Foundation",
+    "task": "individual behavior simulation",
+    "dataset": "14 representative datasets",
+    "confidence": 0.8,
+    "arxiv_id": "2610.08967v1",
+    "title": "Socio-Foundation: A Model for Generalizable Individual Behavior Simulation via Hierarchical Capability Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "MOPD",
+    "task": "unify capability experts",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08967v1",
+    "title": "Socio-Foundation: A Model for Generalizable Individual Behavior Simulation via Hierarchical Capability Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "IndiEval",
+    "task": "evaluate individual behavior",
+    "dataset": "29 metrics across FONTS dimensions}}}user Could you provide the triples again but with the method names spelled out instead of abbreviations? Also, please include the task of",
+    "confidence": 0.8,
+    "arxiv_id": "2610.08967v1",
+    "title": "Socio-Foundation: A Model for Generalizable Individual Behavior Simulation via Hierarchical Capability Distillation",
+    "topic": "opd"
+  },
+  {
+    "method": "OmniCapBench",
+    "task": "audio--visual caption evaluation",
+    "dataset": "786 densely annotated videos",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12458v1",
+    "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "deep-structured diagnostic framework",
+    "task": "audio--visual caption evaluation",
+    "dataset": "786 densely annotated videos",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12458v1",
+    "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "OmniCapBench",
+    "task": "diagnostic",
+    "dataset": "786 densely annotated videos",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12458v1",
+    "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "grasp",
+    "task": "relational structure learning",
+    "dataset": "Tox21, mutagenesis, Cora",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12303v1",
+    "title": "Learning Probabilistic Logic Programs with Functional Gradient Guided Language Models",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "functional gradient boosting",
+    "task": "relational structure learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12303v1",
+    "title": "Learning Probabilistic Logic Programs with Functional Gradient Guided Language Models",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LLM proposal oracle",
+    "task": "relational structure learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12303v1",
+    "title": "Learning Probabilistic Logic Programs with Functional Gradient Guided Language Models",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "ARGUS",
+    "task": "functional interpretation of variants",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12281v1",
+    "title": "Unlocking the Regulatory Genome by ARGUS: An Evidence-Constrained Agentic Framework for Interpreting Single Nucleotide Variants",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "DNABERT",
+    "task": "variant interpretation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12281v1",
+    "title": "Unlocking the Regulatory Genome by ARGUS: An Evidence-Constrained Agentic Framework for Interpreting Single Nucleotide Variants",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "ADASTRA",
+    "task": "variant interpretation",
+    "dataset": "ADASTRA experiments dataframes 15 experiments, FDR = 0.030, JA",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12281v1",
+    "title": "Unlocking the Regulatory Genome by ARGUS: An Evidence-Constrained Agentic Framework for Interpreting Single Nucleotide Variants",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "DynaTTA",
+    "task": "time-series forecasting",
+    "dataset": "ETTm1",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12232v1",
+    "title": "Training on the Future: A Delay-Aware Audit of Test-Time Adaptation for Time-Series Forecasting",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "RLF bank",
+    "task": "time-series forecasting",
+    "dataset": "ETTm1",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12232v1",
+    "title": "Training on the Future: A Delay-Aware Audit of Test-Time Adaptation for Time-Series Forecasting",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "ELF-style corrector",
+    "task": "time-series forecasting",
+    "dataset": "ETTm1",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12232v1",
+    "title": "Training on the Future: A Delay-Aware Audit of Test-Time Adaptation for Time-Series Forecasting",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "VINCIE-NExT",
+    "task": "video editing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12104v1",
+    "title": "VINCIE-NExT: Unlocking Video Editing from Images via In-Context Modeling",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "image editing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12104v1",
+    "title": "VINCIE-NExT: Unlocking Video Editing from Images via In-Context Modeling",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LoRA",
+    "task": "image editing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12104v1",
+    "title": "VINCIE-NExT: Unlocking Video Editing from Images via In-Context Modeling",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "DiagScale",
+    "task": "adaptation",
+    "dataset": "TabArena",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12005v1",
+    "title": "Test-Time Compute for Tabular Foundation Models: Mechanisms, Gains, and Limits",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "TabPFN-3",
+    "task": "aggregation",
+    "dataset": "TabArena",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12005v1",
+    "title": "Test-Time Compute for Tabular Foundation Models: Mechanisms, Gains, and Limits",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "attention-guided retrieval",
+    "task": "context construction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12005v1",
+    "title": "Test-Time Compute for Tabular Foundation Models: Mechanisms, Gains, and Limits",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Agentic-TTT",
+    "task": "test-time training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12002v1",
+    "title": "Agentic-TTT: Training test-time policy for test-time training",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12002v1",
+    "title": "Agentic-TTT: Training test-time policy for test-time training",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Agentic-TTT",
+    "task": "generalization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12002v1",
+    "title": "Agentic-TTT: Training test-time policy for test-time training",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "SR-TTA",
+    "task": "signal processing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11755v1",
+    "title": "SR-TTA: Spatial-Redundancy Test-Time Adaptation for Interference-Robust Respiration Sensing",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "complex-weight beamformer",
+    "task": "signal processing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11755v1",
+    "title": "SR-TTA: Spatial-Redundancy Test-Time Adaptation for Interference-Robust Respiration Sensing",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "spatial-redundancy test-time adaptation",
+    "task": "signal processing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11755v1",
+    "title": "SR-TTA: Spatial-Redundancy Test-Time Adaptation for Interference-Robust Respiration Sensing",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Neurosolver",
+    "task": "mathematical reasoning",
+    "dataset": "Tower of Hanoi",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11696v1",
+    "title": "A 3D Characterization Framework for Intelligent Sequential Decision Making",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "forward-backward reinforcement learning (FBRL",
+    "task": "mathematical reasoning",
+    "dataset": "Tower of Hanoi",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11696v1",
+    "title": "A 3D Characterization Framework for Intelligent Sequential Decision Making",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "automated thought-of-search (AutoToS",
+    "task": "mathematical reasoning",
+    "dataset": "Tower of Hanoi",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11696v1",
+    "title": "A 3D Characterization Framework for Intelligent Sequential Decision Making",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Chronos",
+    "task": "code generation",
+    "dataset": "SWE-Bench Verified",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11578v1",
+    "title": "Chronos Enables Code Agents to Reason over Software Evolution",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Chronos",
+    "task": "code generation",
+    "dataset": "SWE-Bench Pro",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11578v1",
+    "title": "Chronos Enables Code Agents to Reason over Software Evolution",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Chronos",
+    "task": "code generation",
+    "dataset": "SWE-Bench Verified Pro",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11578v1",
+    "title": "Chronos Enables Code Agents to Reason over Software Evolution",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "DuplexAgent",
+    "task": "full-duplex collaboration",
+    "dataset": "timed test conversations",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11299v1",
+    "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Duplex-Harness-RSI",
+    "task": "collaboration workflow improvement",
+    "dataset": "failure traces",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11299v1",
+    "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Reasoning LLMs and coding agents",
+    "task": "delegation pool",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11299v1",
+    "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "possibility frontier search",
+    "task": "open-ended scientific discovery",
+    "dataset": "synthetic and real-world scientific-discovery tasks",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11289v1",
+    "title": "Open-ended Scientific Discovery with Possibilistic Reasoning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "abductive utility",
+    "task": "open-ended scientific discovery",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11289v1",
+    "title": "Open-ended Scientific Discovery with Possibilistic Reasoning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11289v1",
+    "title": "Open-ended Scientific Discovery with Possibilistic Reasoning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Skeleton-Guided Progressive Test-Time Adaptation (SGP-TTA",
+    "task": "image segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11104v1",
+    "title": "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Progressive Batch Normalization (ProgBN",
+    "task": "image segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11104v1",
+    "title": "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Consensus Skeleton Recall (CSR",
+    "task": "image segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11104v1",
+    "title": "Skeleton-Guided Progressive Test-Time Adaptation for Thin Curvilinear Structures",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11031v1",
+    "title": "Language Modeling is Monotone Compression",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "monotone compression algorithms",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11031v1",
+    "title": "Language Modeling is Monotone Compression",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "next-token predictors",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11031v1",
+    "title": "Language Modeling is Monotone Compression",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LVSPM",
+    "task": "image synthesis and pose estimation",
+    "dataset": "RealEstate10k, Co3Dv2, DL3DV",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10960v1",
+    "title": "LVSPM: Long Sequence View Synthesis and Pose Estimation Model",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LVSPM",
+    "task": "novel view synthesis",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10960v1",
+    "title": "LVSPM: Long Sequence View Synthesis and Pose Estimation Model",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LVSPM",
+    "task": "pose estimation",
+    "dataset": "RealEstate10k, Co3Dv2, DL3DV",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10960v1",
+    "title": "LVSPM: Long Sequence View Synthesis and Pose Estimation Model",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "BRANCH",
+    "task": "prompt injection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10742v1",
+    "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "branch",
+    "task": "bypassing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10742v1",
+    "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "branching tree search",
+    "task": "bypassing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10742v1",
+    "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "RunningTab",
+    "task": "direct workspace interaction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10444v1",
+    "title": "RunningTab: Direct Workspace Interaction with Environment-Side Tabs",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "file management",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10444v1",
+    "title": "RunningTab: Direct Workspace Interaction with Environment-Side Tabs",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "context tracking",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10444v1",
+    "title": "RunningTab: Direct Workspace Interaction with Environment-Side Tabs",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Juno",
+    "task": "vision-language-action models",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09940v1",
+    "title": "Juno: Taming Predictive Latents for Vision-Language-Action Models",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "dynamic CLS loss",
+    "task": "pretraining",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09940v1",
+    "title": "Juno: Taming Predictive Latents for Vision-Language-Action Models",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "decoupled reasoning branch",
+    "task": "policy learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09940v1",
+    "title": "Juno: Taming Predictive Latents for Vision-Language-Action Models",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "CIRSeg",
+    "task": "image segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09784v1",
+    "title": "CIRSeg: Coarse-to-Fine Intensity-Robust Liver Segmentation with Source-Free Continual Test-Time Adaptation",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "nnU-Netv2",
+    "task": "image segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09784v1",
+    "title": "CIRSeg: Coarse-to-Fine Intensity-Robust Liver Segmentation with Source-Free Continual Test-Time Adaptation",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "confidence-filtered predictions",
+    "task": "image segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09784v1",
+    "title": "CIRSeg: Coarse-to-Fine Intensity-Robust Liver Segmentation with Source-Free Continual Test-Time Adaptation",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Decoupling Architecture (AO-DA",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09772v1",
+    "title": "Decoupling Logic from Persona: Structural Immunity of Edge LLM Agents to Context Pollution",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LoRA",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09772v1",
+    "title": "Decoupling Logic from Persona: Structural Immunity of Edge LLM Agents to Context Pollution",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Apple M2 laptop",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09772v1",
+    "title": "Decoupling Logic from Persona: Structural Immunity of Edge LLM Agents to Context Pollution",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "PersonTTS",
+    "task": "test-time scaling",
+    "dataset": "AIME, HMMT",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09684v1",
+    "title": "From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "amortized agentic policy-discovery",
+    "task": "test-time scaling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09684v1",
+    "title": "From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "source-distilled procedural guidance",
+    "task": "test-time scaling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09684v1",
+    "title": "From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "COPC",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09597v1",
+    "title": "COPC: Coupled Off-Policy Correction for Asynchronous LLM Reinforcement Learning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09597v1",
+    "title": "COPC: Coupled Off-Policy Correction for Asynchronous LLM Reinforcement Learning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LoRA",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09597v1",
+    "title": "COPC: Coupled Off-Policy Correction for Asynchronous LLM Reinforcement Learning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "World Potential Model (WPM",
+    "task": "task optimization",
+    "dataset": "ALFWorld, ScienceWorld",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09560v1",
+    "title": "World Potential Model: Pretrained World Knowledge as Progress Potentials",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "GRPO",
+    "task": "task optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09560v1",
+    "title": "World Potential Model: Pretrained World Knowledge as Progress Potentials",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "pretrained models",
+    "task": "task optimization",
+    "dataset": "ALFWorld, ScienceWorld",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09560v1",
+    "title": "World Potential Model: Pretrained World Knowledge as Progress Potentials",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "TIRA",
+    "task": "cross-cancer prediction",
+    "dataset": "TCGA-COAD+READ, CPTAC-COAD, TCGA-STAD, TCGA-UCEC, CPTAC-UCEC",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09441v1",
+    "title": "TIRA: Tumor Immune Representation Adaptation for Zero-Shot Cross-Cancer MSI and TMB Prediction",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "TIRA",
+    "task": "zero-shot learning",
+    "dataset": "TCGA-COAD+READ",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09441v1",
+    "title": "TIRA: Tumor Immune Representation Adaptation for Zero-Shot Cross-Cancer MSI and TMB Prediction",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "TIRA",
+    "task": "cross-site prediction",
+    "dataset": "UNI2",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09441v1",
+    "title": "TIRA: Tumor Immune Representation Adaptation for Zero-Shot Cross-Cancer MSI and TMB Prediction",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "AIDA",
+    "task": "alert triage",
+    "dataset": "ALERT-BENCH",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10608v1",
+    "title": "From Investigation Failures to Reliable SOC Agents: Understanding and Improving LLM-Based Alert Triage",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "multiple approaches",
+    "task": "alert triage",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10608v1",
+    "title": "From Investigation Failures to Reliable SOC Agents: Understanding and Improving LLM-Based Alert Triage",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "alert triage",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10608v1",
+    "title": "From Investigation Failures to Reliable SOC Agents: Understanding and Improving LLM-Based Alert Triage",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "CM-DPO",
+    "task": "LLM Planning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09219v1",
+    "title": "CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "DCCG",
+    "task": "null",
+    "dataset": "SynPlan-R",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09219v1",
+    "title": "CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "RT-MED",
+    "task": "null",
+    "dataset": "SynPlan-R",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09219v1",
+    "title": "CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "REFIT",
+    "task": "activity recognition",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08991v1",
+    "title": "REFIT: Recognize, Fix, and Test Wearable Sensor Placement Shifts without Labels",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "axis transforms",
+    "task": "model calibration",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08991v1",
+    "title": "REFIT: Recognize, Fix, and Test Wearable Sensor Placement Shifts without Labels",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "confidence-based selector",
+    "task": "shift detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08991v1",
+    "title": "REFIT: Recognize, Fix, and Test Wearable Sensor Placement Shifts without Labels",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Jev",
+    "task": "financial evidence verification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08675v1",
+    "title": "Same-Number Citation Swaps: Stress-Testing Jev as a Financial Evidence Judge",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "number matching",
+    "task": "financial evidence verification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08675v1",
+    "title": "Same-Number Citation Swaps: Stress-Testing Jev as a Financial Evidence Judge",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "constructed follow-up",
+    "task": "financial evidence verification",
+    "dataset": "36 new source pages labeled by a non-author reviewer",
+    "confidence": 0.8,
+    "arxiv_id": "2610.08675v1",
+    "title": "Same-Number Citation Swaps: Stress-Testing Jev as a Financial Evidence Judge",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Evidence-Bound Reasoning",
+    "task": "neuro-semantic verification",
+    "dataset": "UPenn-GBM",
+    "confidence": 0.8,
+    "arxiv_id": "2610.08660v1",
+    "title": "Evidence-Bound Reasoning: Neuro-Semantic Verification of Biomedical AI in Glioblastoma Radiogenomics",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "cross-cohort transportability",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08660v1",
+    "title": "Evidence-Bound Reasoning: Neuro-Semantic Verification of Biomedical AI in Glioblastoma Radiogenomics",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "null",
+    "task": "model-linked provenance",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08660v1",
+    "title": "Evidence-Bound Reasoning: Neuro-Semantic Verification of Biomedical AI in Glioblastoma Radiogenomics",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "DeltaTTT",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08553v1",
+    "title": "DeltaTTT: Layerwise Optimization for Nonlinear Recurrent Memory",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08553v1",
+    "title": "DeltaTTT: Layerwise Optimization for Nonlinear Recurrent Memory",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "LoRA",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08553v1",
+    "title": "DeltaTTT: Layerwise Optimization for Nonlinear Recurrent Memory",
+    "topic": "test_time_compute"
+  },
+  {
+    "method": "reViT",
+    "task": "image classification",
+    "dataset": "ImageNet-1k",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12448v1",
+    "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+    "topic": "moe"
+  },
+  {
+    "method": "reViT",
+    "task": "feature distillation",
+    "dataset": "DINOv2",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12448v1",
+    "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+    "topic": "moe"
+  },
+  {
+    "method": "elastic-depth training",
+    "task": "multiple tasks",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12448v1",
+    "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+    "topic": "moe"
+  },
+  {
+    "method": "ReSI",
+    "task": "recursive safety improvement",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12233v1",
+    "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
+    "topic": "moe"
+  },
+  {
+    "method": "red-teaming methods",
+    "task": "vulnerability identification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12233v1",
+    "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
+    "topic": "moe"
+  },
+  {
+    "method": "training recipes",
+    "task": "model improvement",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12233v1",
+    "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
+    "topic": "moe"
+  },
+  {
+    "method": "MiMo-V2.6",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11959v1",
+    "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+    "topic": "moe"
+  },
+  {
+    "method": "asynchronous training",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11959v1",
+    "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+    "topic": "moe"
+  },
+  {
+    "method": "mixed-task agentic RL",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11959v1",
+    "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+    "topic": "moe"
+  },
+  {
+    "method": "CogEmo-MoE",
+    "task": "emotion understanding",
+    "dataset": "CogEmo-40K",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11918v1",
+    "title": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
+    "topic": "moe"
+  },
+  {
+    "method": "interleaved MoE blocks",
+    "task": "emotion understanding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11918v1",
+    "title": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
+    "topic": "moe"
+  },
+  {
+    "method": "instruction-tuning",
+    "task": "emotion understanding",
+    "dataset": "CogEmo-40K",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11918v1",
+    "title": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
+    "topic": "moe"
+  },
+  {
+    "method": "cost-aware gating mechanism",
+    "task": "model selection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11908v1",
+    "title": "Cost-Aware Mixture-of-Experts Coordination for Model Markets",
+    "topic": "moe"
+  },
+  {
+    "method": "cost-adjusted revenue allocation",
+    "task": "model selection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11908v1",
+    "title": "Cost-Aware Mixture-of-Experts Coordination for Model Markets",
+    "topic": "moe"
+  },
+  {
+    "method": "gating networks",
+    "task": "model coordination",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11908v1",
+    "title": "Cost-Aware Mixture-of-Experts Coordination for Model Markets",
+    "topic": "moe"
+  },
+  {
+    "method": "LAMP",
+    "task": "audio and lighting cues alignment",
+    "dataset": "Musilux",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11792v1",
+    "title": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
+    "topic": "moe"
+  },
+  {
+    "method": "PAMoE",
+    "task": "cue retrieval and adaptation",
+    "dataset": "Musilux",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11792v1",
+    "title": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
+    "topic": "moe"
+  },
+  {
+    "method": "null",
+    "task": "stage lighting design",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11792v1",
+    "title": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
+    "topic": "moe"
+  },
+  {
+    "method": "RouterInterp",
+    "task": "interpretation",
+    "dataset": "gpt-oss-20b",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11775v1",
+    "title": "RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing",
+    "topic": "moe"
+  },
+  {
+    "method": "Sparse Autoencoder",
+    "task": "feature extraction",
+    "dataset": "gpt-oss-20b",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11775v1",
+    "title": "RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing",
+    "topic": "moe"
+  },
+  {
+    "method": "prior token statistics",
+    "task": "interpretation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11775v1",
+    "title": "RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing",
+    "topic": "moe"
+  },
+  {
+    "method": "Elastic Expert Routing",
+    "task": "sparse mixture-of-experts training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11575v1",
+    "title": "Smoothing the Top-k Exposure Boundary for Sparse Mixture-of-Experts",
+    "topic": "moe"
+  },
+  {
+    "method": "null",
+    "task": "downstream performance evaluation",
+    "dataset": "OLMoE-1B-7B, Qwen3-30B-A3B",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11575v1",
+    "title": "Smoothing the Top-k Exposure Boundary for Sparse Mixture-of-Experts",
+    "topic": "moe"
+  },
+  {
+    "method": "stochastic sampling",
+    "task": "training optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11575v1",
+    "title": "Smoothing the Top-k Exposure Boundary for Sparse Mixture-of-Experts",
+    "topic": "moe"
+  },
+  {
+    "method": "WARP-VLA",
+    "task": "robotic manipulation",
+    "dataset": "LIBERO",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11508v1",
+    "title": "WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models",
+    "topic": "moe"
+  },
+  {
+    "method": "Mixture-of-Experts",
+    "task": "robotic manipulation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11508v1",
+    "title": "WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models",
+    "topic": "moe"
+  },
+  {
+    "method": "real-robot experiments",
+    "task": "robotic manipulation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11508v1",
+    "title": "WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models",
+    "topic": "moe"
+  },
+  {
+    "method": "DivMoE",
+    "task": "fine-grained MoE upcycling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11317v1",
+    "title": "DivMoE: Fine-Grained MoE Upcycling via Cross-Domain Expert Composition",
+    "topic": "moe"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11317v1",
+    "title": "DivMoE: Fine-Grained MoE Upcycling via Cross-Domain Expert Composition",
+    "topic": "moe"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11317v1",
+    "title": "DivMoE: Fine-Grained MoE Upcycling via Cross-Domain Expert Composition",
+    "topic": "moe"
+  },
+  {
+    "method": "DRQ",
+    "task": "model quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11226v1",
+    "title": "When Lower Reconstruction Loss Hurts: Distributionally Robust Refinement for Low-Bit LLM Quantization",
+    "topic": "moe"
+  },
+  {
+    "method": "AWQ",
+    "task": "model quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11226v1",
+    "title": "When Lower Reconstruction Loss Hurts: Distributionally Robust Refinement for Low-Bit LLM Quantization",
+    "topic": "moe"
+  },
+  {
+    "method": "GPTQ",
+    "task": "model quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11226v1",
+    "title": "When Lower Reconstruction Loss Hurts: Distributionally Robust Refinement for Low-Bit LLM Quantization",
+    "topic": "moe"
+  },
+  {
+    "method": "LoRA",
+    "task": "membership inference attack",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10616v1",
+    "title": "When Routing Reveals Membership: Privacy Leakage from MoE Router Telemetry",
+    "topic": "moe"
+  },
+  {
+    "method": "router-augmented membership inference attack",
+    "task": "membership inference",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10616v1",
+    "title": "When Routing Reveals Membership: Privacy Leakage from MoE Router Telemetry",
+    "topic": "moe"
+  },
+  {
+    "method": "instruction tuning",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10616v1",
+    "title": "When Routing Reveals Membership: Privacy Leakage from MoE Router Telemetry",
+    "topic": "moe"
+  },
+  {
+    "method": "pre-trained transformers",
+    "task": "financial narrative summarization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09529v1",
+    "title": "A Comparative Study of Evaluation Metrics for Long-Document Financial Narrative Summarization with Transformers",
+    "topic": "moe"
+  },
+  {
+    "method": "multiple evaluation metrics",
+    "task": "benchmarking summarisation methods",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09529v1",
+    "title": "A Comparative Study of Evaluation Metrics for Long-Document Financial Narrative Summarization with Transformers",
+    "topic": "moe"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09529v1",
+    "title": "A Comparative Study of Evaluation Metrics for Long-Document Financial Narrative Summarization with Transformers",
+    "topic": "moe"
+  },
+  {
+    "method": "CoMoE",
+    "task": "model inference optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09424v1",
+    "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+    "topic": "moe"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "model inference optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09424v1",
+    "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+    "topic": "moe"
+  },
+  {
+    "method": "LoRA",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09424v1",
+    "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+    "topic": "moe"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09372v1",
+    "title": "Expert Coupling in MoE Pretraining: Reducing All-to-All Overhead with Correlated Placement and Token Shuffling",
+    "topic": "moe"
+  },
+  {
+    "method": "expert placement",
+    "task": "model training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09372v1",
+    "title": "Expert Coupling in MoE Pretraining: Reducing All-to-All Overhead with Correlated Placement and Token Shuffling",
+    "topic": "moe"
+  },
+  {
+    "method": "token shuffling",
+    "task": "model training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09372v1",
+    "title": "Expert Coupling in MoE Pretraining: Reducing All-to-All Overhead with Correlated Placement and Token Shuffling",
+    "topic": "moe"
+  },
+  {
+    "method": "Shared Low-rank Basis Factorization (SLBF",
+    "task": "weight reconstruction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09342v1",
+    "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+    "topic": "moe"
+  },
+  {
+    "method": "expert pruning",
+    "task": "MoE compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09342v1",
+    "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+    "topic": "moe"
+  },
+  {
+    "method": "expert merging",
+    "task": "MoE compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09342v1",
+    "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+    "topic": "moe"
+  },
+  {
+    "method": "CurveTQ",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09212v1",
+    "title": "CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search",
+    "topic": "moe"
+  },
+  {
+    "method": "trellis codec",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09212v1",
+    "title": "CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search",
+    "topic": "moe"
+  },
+  {
+    "method": "weighted native search",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09212v1",
+    "title": "CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search",
+    "topic": "moe"
+  },
+  {
+    "method": "LayerRoPE",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09179v1",
+    "title": "LayerRoPE: Dynamic Depth-wise Magnitude & Angular Superposition",
+    "topic": "moe"
+  },
+  {
+    "method": "LayerRoPE",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09179v1",
+    "title": "LayerRoPE: Dynamic Depth-wise Magnitude & Angular Superposition",
+    "topic": "moe"
+  },
+  {
+    "method": "LayerRoPE",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09179v1",
+    "title": "LayerRoPE: Dynamic Depth-wise Magnitude & Angular Superposition",
+    "topic": "moe"
+  },
+  {
+    "method": "Tiny Transformers",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09003v1",
+    "title": "Algorithmic Scratchpads and Curriculum Staging for Arithmetic Reasoning in Tiny Transformers",
+    "topic": "moe"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09003v1",
+    "title": "Algorithmic Scratchpads and Curriculum Staging for Arithmetic Reasoning in Tiny Transformers",
+    "topic": "moe"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09003v1",
+    "title": "Algorithmic Scratchpads and Curriculum Staging for Arithmetic Reasoning in Tiny Transformers",
+    "topic": "moe"
+  },
+  {
+    "method": "supervised fine-tuning",
+    "task": "abstract reasoning",
+    "dataset": "ARC-TGI",
+    "confidence": 0.8,
+    "arxiv_id": "2610.08680v1",
+    "title": "A Systematic Study of Small Language Models on Abstract Reasoning Tasks",
+    "topic": "moe"
+  },
+  {
+    "method": "encoder--decoder",
+    "task": "abstract reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08680v1",
+    "title": "A Systematic Study of Small Language Models on Abstract Reasoning Tasks",
+    "topic": "moe"
+  },
+  {
+    "method": "mixture-of-experts",
+    "task": "abstract reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08680v1",
+    "title": "A Systematic Study of Small Language Models on Abstract Reasoning Tasks",
+    "topic": "moe"
+  },
+  {
+    "method": "RGE",
+    "task": "image forgery detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08639v1",
+    "title": "Forensic Reserve: Eliciting Latent Knowledge for Image Forgery Detection",
+    "topic": "moe"
+  },
+  {
+    "method": "F-lens",
+    "task": "image forgery detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08639v1",
+    "title": "Forensic Reserve: Eliciting Latent Knowledge for Image Forgery Detection",
+    "topic": "moe"
+  },
+  {
+    "method": "FRA",
+    "task": "image forgery detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08639v1",
+    "title": "Forensic Reserve: Eliciting Latent Knowledge for Image Forgery Detection",
+    "topic": "moe"
+  },
+  {
+    "method": "Weighted Quality Index (QI",
+    "task": "automated program repair",
+    "dataset": "QuixBugs, Defects4J",
+    "confidence": 0.8,
+    "arxiv_id": "2610.08173v1",
+    "title": "Beyond the Leaderboard: Multi-Dimensional Evaluation of Dense and Mixture-of-Experts Models for Automated Program Repair",
+    "topic": "moe"
+  },
+  {
+    "method": "dense Qwen2.5-Coder models, DeepSeek-Coder-V2-Lite MoE model",
+    "task": "automated program repair",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08173v1",
+    "title": "Beyond the Leaderboard: Multi-Dimensional Evaluation of Dense and Mixture-of-Experts Models for Automated Program Repair",
+    "topic": "moe"
+  },
+  {
+    "method": "McNemar's exact test",
+    "task": "evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.08173v1",
+    "title": "Beyond the Leaderboard: Multi-Dimensional Evaluation of Dense and Mixture-of-Experts Models for Automated Program Repair",
+    "topic": "moe"
+  },
+  {
+    "method": "MASKerade",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07809v1",
+    "title": "MASKerade: Token-Routed Mask Experts for Dense-to-MoE Upcycling",
+    "topic": "moe"
+  },
+  {
+    "method": "MASKerade",
+    "task": "MoE upcycling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07809v1",
+    "title": "MASKerade: Token-Routed Mask Experts for Dense-to-MoE Upcycling",
+    "topic": "moe"
+  },
+  {
+    "method": "MASKerade",
+    "task": "vision-language benchmarks",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07809v1",
+    "title": "MASKerade: Token-Routed Mask Experts for Dense-to-MoE Upcycling",
+    "topic": "moe"
+  },
+  {
+    "method": "softmax attention",
+    "task": "mean estimation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07804v1",
+    "title": "Adaptive Mean Estimation by In-Context Learning: A Gradient-Flow Analysis",
+    "topic": "moe"
+  },
+  {
+    "method": "softmax mixture of experts",
+    "task": "mean estimation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07804v1",
+    "title": "Adaptive Mean Estimation by In-Context Learning: A Gradient-Flow Analysis",
+    "topic": "moe"
+  },
+  {
+    "method": "gated linear unit (GLU",
+    "task": "mean estimation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07804v1",
+    "title": "Adaptive Mean Estimation by In-Context Learning: A Gradient-Flow Analysis",
+    "topic": "moe"
+  },
+  {
+    "method": "router-logit safety detector",
+    "task": "multimodal safety",
+    "dataset": "HoliSafe",
+    "confidence": 0.8,
+    "arxiv_id": "2610.07774v1",
+    "title": "Reading, Not Manipulating: Leveraging Router Logits for Multimodal Safety in MoE Vision-Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "prompt prefill",
+    "task": "multimodal safety",
+    "dataset": "HoliSafe",
+    "confidence": 0.8,
+    "arxiv_id": "2610.07774v1",
+    "title": "Reading, Not Manipulating: Leveraging Router Logits for Multimodal Safety in MoE Vision-Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "router logits",
+    "task": "multimodal safety",
+    "dataset": "HoliSafe",
+    "confidence": 0.8,
+    "arxiv_id": "2610.07774v1",
+    "title": "Reading, Not Manipulating: Leveraging Router Logits for Multimodal Safety in MoE Vision-Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "TRACE",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07767v1",
+    "title": "TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "FP4",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07767v1",
+    "title": "TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "quantization-aware training",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07767v1",
+    "title": "TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "AM$^2$ES",
+    "task": "cancer survival prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07694v1",
+    "title": "Anchor-driven Multi-modal Multi-scale Expert Selection for Survival Prediction",
+    "topic": "moe"
+  },
+  {
+    "method": "AMF",
+    "task": "multi-modal fusion",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07694v1",
+    "title": "Anchor-driven Multi-modal Multi-scale Expert Selection for Survival Prediction",
+    "topic": "moe"
+  },
+  {
+    "method": "H-MoE",
+    "task": "prognostic selection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07694v1",
+    "title": "Anchor-driven Multi-modal Multi-scale Expert Selection for Survival Prediction",
+    "topic": "moe"
+  },
+  {
+    "method": "VALSE",
+    "task": "model optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07606v1",
+    "title": "VALSE: Vertical Adaptive Layer Skipping for Efficient Inference in Large Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "VALSE",
+    "task": "model optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07606v1",
+    "title": "VALSE: Vertical Adaptive Layer Skipping for Efficient Inference in Large Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "VALSE",
+    "task": "model optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07606v1",
+    "title": "VALSE: Vertical Adaptive Layer Skipping for Efficient Inference in Large Language Models",
+    "topic": "moe"
+  },
+  {
+    "method": "Stepped MoE",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07348v1",
+    "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
+    "topic": "moe"
+  },
+  {
+    "method": "elastic structures",
+    "task": "model deployment",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07348v1",
+    "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
+    "topic": "moe"
+  },
+  {
+    "method": "sparsely gated architectures",
+    "task": "model deployment",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07348v1",
+    "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
+    "topic": "moe"
+  },
+  {
+    "method": "RelayMoE",
+    "task": "distributed MoE training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07333v1",
+    "title": "Memory-Efficient Expert Routing for Distributed MoE Training",
+    "topic": "moe"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "distributed MoE training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07333v1",
+    "title": "Memory-Efficient Expert Routing for Distributed MoE Training",
+    "topic": "moe"
+  },
+  {
+    "method": "LoRA",
+    "task": "distributed MoE training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.07333v1",
+    "title": "Memory-Efficient Expert Routing for Distributed MoE Training",
+    "topic": "moe"
+  },
+  {
+    "method": "probes",
+    "task": "deception detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12445v1",
+    "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SHADE-Arena",
+    "task": "evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12445v1",
+    "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "ground truth",
+    "task": "determination",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12445v1",
+    "title": "Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "OnTrack",
+    "task": "real-time monitoring and intervention",
+    "dataset": "SWE-bench trajectories",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12375v1",
+    "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "real-time monitoring and intervention",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12375v1",
+    "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "real-time monitoring and intervention",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12375v1",
+    "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "mathematical reasoning",
+    "dataset": "controlled conflict and naturally occurring conflict settings",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12360v1",
+    "title": "Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "mathematical reasoning",
+    "dataset": "multi-step agentic execution",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12360v1",
+    "title": "Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "epistemic humility evaluation",
+    "dataset": "controlled conflict and no-conflict controls",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12360v1",
+    "title": "Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Bayesian optimisation",
+    "task": "neural operator adaptation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12325v1",
+    "title": "Prior or Feedback? What an LLM Uses When Adapting Neural Operators",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "random search",
+    "task": "neural operator adaptation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12325v1",
+    "title": "Prior or Feedback? What an LLM Uses When Adapting Neural Operators",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "controlled interventions",
+    "task": "evaluate LLM behavior",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12325v1",
+    "title": "Prior or Feedback? What an LLM Uses When Adapting Neural Operators",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SiGMA",
+    "task": "anomaly understanding",
+    "dataset": "MMAD",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12310v1",
+    "title": "Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "trained specialists",
+    "task": "anomaly understanding",
+    "dataset": "MMAD",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12310v1",
+    "title": "Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SiGMA",
+    "task": "anomaly understanding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12310v1",
+    "title": "Is In-Domain Training Enough for Fine-Grained Industrial Anomaly Understanding?",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "language models",
+    "task": "experimental prediction",
+    "dataset": "9 research environments",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12235v1",
+    "title": "Language Models as AI Research World Models",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "language models",
+    "task": "experimental reuse",
+    "dataset": "9 research environments",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12235v1",
+    "title": "Language Models as AI Research World Models",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "language models",
+    "task": "multi-round research",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12235v1",
+    "title": "Language Models as AI Research World Models",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "DataSense-Bench",
+    "task": "data selection and performance forecasting",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12190v1",
+    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "OpenThoughts-Agent",
+    "task": "terminal problem solving",
+    "dataset": "TBLite",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12190v1",
+    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "EnvScaler",
+    "task": "tool use",
+    "dataset": "BFCL",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12190v1",
+    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "AgenticBBO",
+    "task": "black-box optimization",
+    "dataset": "synthetic functions, hyperparameter optimization, database tuning, chip design, molecular design",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12183v1",
+    "title": "A Closer Look at Agentic BBO: Benchmarking LLM Agents for Black-Box Optimization",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "AgenticBBO",
+    "task": "black-box optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12183v1",
+    "title": "A Closer Look at Agentic BBO: Benchmarking LLM Agents for Black-Box Optimization",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "AgenticBBO",
+    "task": "black-box optimization",
+    "dataset": "numerical optimizers",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12183v1",
+    "title": "A Closer Look at Agentic BBO: Benchmarking LLM Agents for Black-Box Optimization",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SuperNav",
+    "task": "navigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12126v1",
+    "title": "SuperNav: An Agentic Navigation System for Any Task in Any Scene",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "pretrained MLLM",
+    "task": "interpret requests",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12126v1",
+    "title": "SuperNav: An Agentic Navigation System for Any Task in Any Scene",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Navigation Skills",
+    "task": "navigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12126v1",
+    "title": "SuperNav: An Agentic Navigation System for Any Task in Any Scene",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Hippocam",
+    "task": "memory and learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12124v1",
+    "title": "Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12124v1",
+    "title": "Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LoRA",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12124v1",
+    "title": "Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "split-key public-private watermarking method",
+    "task": "watermark detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12106v1",
+    "title": "Could LLM Watermark Detection be Public?",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "statistical test",
+    "task": "watermark detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12106v1",
+    "title": "Could LLM Watermark Detection be Public?",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "two-stage mechanism",
+    "task": "watermark detection",
+    "dataset": "null}]}user Title: Could LLM Watermark Detection be Public? Abstract: Watermarking large language models is popular for tracing chatbot and agentic outputs, yet detectors remain unreleased since exposing them could let attackers do targeted edits with the detector's feedback. However, watermarks are already vulnerable to uninformed tampering attacks. We thus first quantify whether a public detector would be an additional liability in a deployment setting at varying levels of access, from token-level scores to a binary verdict. Second, we introduce a split-key public-private watermarking method that exposes one key through a public detector while keeping the other for full verification and forensics. An informed attacker can only move the public signal, creating an imbalance between public and private scores. We introduce a statistical test for this imbalance, and combine it with the full key verdict in a two-stage mechanism. Third, we evaluate the split-key method on a wide range of removal and forgery attacks, comparing the uninformed to detector-informed settings. Public detection improves removal only at small edit budgets, since plain rephrasing already strips the watermark at a lower quality cost, but it does enable forgery, which the private pi",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12106v1",
+    "title": "Could LLM Watermark Detection be Public?",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "EvoAlloc",
+    "task": "program evolution",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12086v1",
+    "title": "EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "resource allocation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12086v1",
+    "title": "EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "evaluation feedback",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12086v1",
+    "title": "EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "RACE",
+    "task": "adaptive reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12061v1",
+    "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LoGiC",
+    "task": "adaptive reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12061v1",
+    "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12061v1",
+    "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "probation method",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12022v1",
+    "title": "Examining Social Attribution in LLM Reasoning: A Theory-Guided Probing Methodology",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Attribution Theory",
+    "task": "explanation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12022v1",
+    "title": "Examining Social Attribution in LLM Reasoning: A Theory-Guided Probing Methodology",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LLM judgment",
+    "task": "evaluation",
+    "dataset": "Vignette subset, Reality subset",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12022v1",
+    "title": "Examining Social Attribution in LLM Reasoning: A Theory-Guided Probing Methodology",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "MindFlow",
+    "task": "research idea innovation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11966v1",
+    "title": "MindFlow: Mind Supernet Powered Thinking Flows for Research Idea Innovation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "probabilistic mind supernet",
+    "task": "model",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11966v1",
+    "title": "MindFlow: Mind Supernet Powered Thinking Flows for Research Idea Innovation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "tournament-based relative ranking",
+    "task": "evaluate candidate ideas",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11966v1",
+    "title": "MindFlow: Mind Supernet Powered Thinking Flows for Research Idea Innovation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "OpenCUA-72B",
+    "task": "bug verification",
+    "dataset": "no-code fixes",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11963v1",
+    "title": "Can LLMs Fix It Without Code? Toward Automated Verification of No-Code Bug Fixes",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Claude Sonnet 5",
+    "task": "bug verification",
+    "dataset": "no-code fixes",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11963v1",
+    "title": "Can LLMs Fix It Without Code? Toward Automated Verification of No-Code Bug Fixes",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Meta's Muse Glimmer",
+    "task": "bug verification",
+    "dataset": "no-code fixes",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11963v1",
+    "title": "Can LLMs Fix It Without Code? Toward Automated Verification of No-Code Bug Fixes",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "QGMem",
+    "task": "long-term conversational agents",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11920v1",
+    "title": "Event-Centric Memory with Query-Aware Graph Augmentation for Long-Term Conversational Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "QGMem",
+    "task": "memory construction and activation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11920v1",
+    "title": "Event-Centric Memory with Query-Aware Graph Augmentation for Long-Term Conversational Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "QGMem",
+    "task": "memory retrieval and reranking",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11920v1",
+    "title": "Event-Centric Memory with Query-Aware Graph Augmentation for Long-Term Conversational Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11899v1",
+    "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "dataset assessment",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11899v1",
+    "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "software system evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11899v1",
+    "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LEVER",
+    "task": "mathematical reasoning",
+    "dataset": "PutnamBench",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11862v1",
+    "title": "LEVER: Adaptive Cost-Aware Proof Search Over AND/OR Graphs",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LEVER",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11862v1",
+    "title": "LEVER: Adaptive Cost-Aware Proof Search Over AND/OR Graphs",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LEVER",
+    "task": "mathematical reasoning",
+    "dataset": "Lean 4",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11862v1",
+    "title": "LEVER: Adaptive Cost-Aware Proof Search Over AND/OR Graphs",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SkillMorph",
+    "task": "fault localization",
+    "dataset": "SWE-Skills-Bench, CannBot",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11858v1",
+    "title": "Trajectory-Guided Fault Localization for Agent Skill Evolution",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SkillMorph",
+    "task": "skill evolution",
+    "dataset": "SWE-Skills-Bench, CannBot",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11858v1",
+    "title": "Trajectory-Guided Fault Localization for Agent Skill Evolution",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "SkillMorph",
+    "task": "code generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11858v1",
+    "title": "Trajectory-Guided Fault Localization for Agent Skill Evolution",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Memento 3",
+    "task": "model-based recursive self-improvement",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11794v1",
+    "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11794v1",
+    "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LoRA",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11794v1",
+    "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Guard models",
+    "task": "safeguard LLM-based agents",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11773v1",
+    "title": "Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "ObligationBench",
+    "task": "evaluate obligation identification capability",
+    "dataset": "ObligationBench",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11773v1",
+    "title": "Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "representative models",
+    "task": "evaluate performance",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11773v1",
+    "title": "Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "ontology tower",
+    "task": "mathematical reasoning",
+    "dataset": "real low-humidity air-handling test plant",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11768v1",
+    "title": "Narrow and Deep: An Ontology Tower as the Knowledge of an LLM Agent for an Industrial Equipment System",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "text projection",
+    "task": "mathematical reasoning",
+    "dataset": "real low-humidity air-handling test plant",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11768v1",
+    "title": "Narrow and Deep: An Ontology Tower as the Knowledge of an LLM Agent for an Industrial Equipment System",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "open-weight models",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11768v1",
+    "title": "Narrow and Deep: An Ontology Tower as the Knowledge of an LLM Agent for an Industrial Equipment System",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "MemTrial",
+    "task": "financial markets",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11732v1",
+    "title": "MemTrial: Learning When to Trust Memory in LLM Portfolio Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "fractional factorial design",
+    "task": "model selection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11732v1",
+    "title": "MemTrial: Learning When to Trust Memory in LLM Portfolio Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "hierarchical Bayesian model",
+    "task": "credit assignment",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11732v1",
+    "title": "MemTrial: Learning When to Trust Memory in LLM Portfolio Agents",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "TRACE",
+    "task": "diagnosing verifier brittleness",
+    "dataset": "synthetic tasks",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11678v1",
+    "title": "TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "TRACE",
+    "task": "diagnosing verifier brittleness",
+    "dataset": "public $^2$-bench tasks",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11678v1",
+    "title": "TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "renaming tools",
+    "task": "diagnosing verifier brittleness",
+    "dataset": "synthetic tasks",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11678v1",
+    "title": "TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "LoRA",
+    "task": "language modeling",
+    "dataset": "DeepPlanning",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11655v1",
+    "title": "Harness Evolution Hits a Ceiling: When Weight Training Should Begin",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Harness evolution",
+    "task": "language modeling",
+    "dataset": "DeepPlanning",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11655v1",
+    "title": "Harness Evolution Hits a Ceiling: When Weight Training Should Begin",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11655v1",
+    "title": "Harness Evolution Hits a Ceiling: When Weight Training Should Begin",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Evidence-Traceable Dynamic Interviewer Architecture",
+    "task": "expertise-adaptive qualitative interviews",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11651v1",
+    "title": "Evidence-Traceable Dynamic Interviewer Architecture for Expertise-Adaptive Qualitative Interviews Using Local LLMs",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Large Language Model",
+    "task": "expertise-adaptive qualitative interviews",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11651v1",
+    "title": "Evidence-Traceable Dynamic Interviewer Architecture for Expertise-Adaptive Qualitative Interviews Using Local LLMs",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "expertise profiling module",
+    "task": "expertise-adaptive qualitative interviews",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11651v1",
+    "title": "Evidence-Traceable Dynamic Interviewer Architecture for Expertise-Adaptive Qualitative Interviews Using Local LLMs",
+    "topic": "llm_agents"
+  },
+  {
+    "method": "Inconsistency-Robust Periodic 4DGS",
+    "task": "video synthesis",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12461v1",
+    "title": "OuroWorld: Bringing Any 3D World Alive as Diverse, Endlessly Looping 3D Cinemagraphs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "ground-truth-free evaluation",
+    "task": "evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12461v1",
+    "title": "OuroWorld: Bringing Any 3D World Alive as Diverse, Endlessly Looping 3D Cinemagraphs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "user-study comparisons",
+    "task": "evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12461v1",
+    "title": "OuroWorld: Bringing Any 3D World Alive as Diverse, Endlessly Looping 3D Cinemagraphs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "VersaCamVLA",
+    "task": "robotic manipulation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12451v1",
+    "title": "VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "multi-signal target-view prediction",
+    "task": "vision-language-action",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12451v1",
+    "title": "VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Wrist-Augmented Pose Sampling",
+    "task": "vision-language-action",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12451v1",
+    "title": "VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "WOVEN",
+    "task": "visual reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12417v1",
+    "title": "WOVEN: Weaving Visual World Modeling into Multimodal LLMs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "null",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12417v1",
+    "title": "WOVEN: Weaving Visual World Modeling into Multimodal LLMs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "WOVEN",
+    "task": "visual transition reasoning",
+    "dataset": "WOVEN",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12417v1",
+    "title": "WOVEN: Weaving Visual World Modeling into Multimodal LLMs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "SpaceCast-Bench",
+    "task": "predictive spatial reasoning",
+    "dataset": "182 real-world scenes",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12402v1",
+    "title": "SpaceCast-Bench: Evaluating Predictive Spatial Reasoning in Vision-Language Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Qwen3-VL-4B",
+    "task": "neural network fine-tuning",
+    "dataset": "programmatically generated data",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12402v1",
+    "title": "SpaceCast-Bench: Evaluating Predictive Spatial Reasoning in Vision-Language Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "human performance",
+    "task": "benchmark evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12402v1",
+    "title": "SpaceCast-Bench: Evaluating Predictive Spatial Reasoning in Vision-Language Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "GeoReform",
+    "task": "multimodal geometry problem solving",
+    "dataset": "Geometry3K",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12391v1",
+    "title": "GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12391v1",
+    "title": "GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12391v1",
+    "title": "GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "WorldAlign",
+    "task": "video generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12382v1",
+    "title": "WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "semantically guided masked reprojection",
+    "task": "video generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12382v1",
+    "title": "WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "camera-motion reward",
+    "task": "video generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12382v1",
+    "title": "WorldAlign: Decoupled 4D Reward for World-Consistent Video Generation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "OTTER",
+    "task": "grounding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12305v1",
+    "title": "From What to Which: Decoding Modifier Grounding in Frozen MLLMs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "grounding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12305v1",
+    "title": "From What to Which: Decoding Modifier Grounding in Frozen MLLMs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "grounding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12305v1",
+    "title": "From What to Which: Decoding Modifier Grounding in Frozen MLLMs",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "DVD",
+    "task": "perception",
+    "dataset": "RefCOCO series, SUN-RGBD, KITTI, Hypersim, nuScenes",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12266v1",
+    "title": "DVD: Dynamic Vector Decoding for Efficient MLLM-based Perception",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "DVD",
+    "task": "perception",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12266v1",
+    "title": "DVD: Dynamic Vector Decoding for Efficient MLLM-based Perception",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "DVD",
+    "task": "perception",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12266v1",
+    "title": "DVD: Dynamic Vector Decoding for Efficient MLLM-based Perception",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "RePaint",
+    "task": "image generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12147v1",
+    "title": "Healthy Counterfactual Generation via Diffusion Inpainting for Mammography Classification",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Denoising Diffusion Probabilistic Model",
+    "task": "image restoration",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12147v1",
+    "title": "Healthy Counterfactual Generation via Diffusion Inpainting for Mammography Classification",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "counterfactual data augmentation",
+    "task": "image synthesis",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12147v1",
+    "title": "Healthy Counterfactual Generation via Diffusion Inpainting for Mammography Classification",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "BATok",
+    "task": "signal tokenization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12142v1",
+    "title": "Instruction-Conditioned Electromagnetic Spectrum Understanding via Budget-Adaptive Signal Tokenization",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "BATok",
+    "task": "signal representation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12142v1",
+    "title": "Instruction-Conditioned Electromagnetic Spectrum Understanding via Budget-Adaptive Signal Tokenization",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "EMSpec-Instruct",
+    "task": "instruction alignment",
+    "dataset": "EMSpec-Instruct",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12142v1",
+    "title": "Instruction-Conditioned Electromagnetic Spectrum Understanding via Budget-Adaptive Signal Tokenization",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "DECT-GRPO",
+    "task": "grounding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12107v1",
+    "title": "ContourVLA: A Closed-Loop Perception-Action Contour Policy for Generalized Referring Expression Segmentation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "ContourVLA",
+    "task": "referring expression segmentation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12107v1",
+    "title": "ContourVLA: A Closed-Loop Perception-Action Contour Policy for Generalized Referring Expression Segmentation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "GRPO",
+    "task": "grounding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12107v1",
+    "title": "ContourVLA: A Closed-Loop Perception-Action Contour Policy for Generalized Referring Expression Segmentation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "FLOWMEM",
+    "task": "closed-loop vision-language-action control",
+    "dataset": "RoboMME, LIBERO-Plus",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12090v1",
+    "title": "Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12090v1",
+    "title": "Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12090v1",
+    "title": "Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "generalist model",
+    "task": "image/video question answering",
+    "dataset": "KilometerAudio, KilometerVision, original Perception Test benchmark",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12081v1",
+    "title": "Perception Test 2026: Challenge Summary and Extension to City-scale Audio-Visual Reasoning",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "expensive agentic pipelines",
+    "task": "spatial and multimodal reasoning",
+    "dataset": "KilometerAudio, KilometerVision",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12081v1",
+    "title": "Perception Test 2026: Challenge Summary and Extension to City-scale Audio-Visual Reasoning",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12081v1",
+    "title": "Perception Test 2026: Challenge Summary and Extension to City-scale Audio-Visual Reasoning",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "ViMoD",
+    "task": "multimodal reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12060v1",
+    "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "DART",
+    "task": "multimodal reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12060v1",
+    "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "TRACE",
+    "task": "multimodal reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12060v1",
+    "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "HWAM",
+    "task": "action generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12026v1",
+    "title": "Humanoid World Action Model With Joint State--Action Generation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "VLA",
+    "task": "action generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12026v1",
+    "title": "Humanoid World Action Model With Joint State--Action Generation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "WAM",
+    "task": "action generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12026v1",
+    "title": "Humanoid World Action Model With Joint State--Action Generation",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "REACT",
+    "task": "robot control",
+    "dataset": "RoboTwin 2.0",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12007v1",
+    "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "rolling-denoising",
+    "task": "robot control",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12007v1",
+    "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "dual decoupling",
+    "task": "robot control",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12007v1",
+    "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "DataVista",
+    "task": "data video understanding",
+    "dataset": "961 real-world data videos",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11993v1",
+    "title": "DataVista: Diagnosing Multimodal LLMs on Data Video Understanding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Gemini-3.1-Pro",
+    "task": "data video understanding",
+    "dataset": "961 real-world data videos",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11993v1",
+    "title": "DataVista: Diagnosing Multimodal LLMs on Data Video Understanding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "human expert",
+    "task": "data video understanding",
+    "dataset": "961 real-world data videos",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11993v1",
+    "title": "DataVista: Diagnosing Multimodal LLMs on Data Video Understanding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "activation steering",
+    "task": "damage assessment",
+    "dataset": "SeisML",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11986v1",
+    "title": "FearCaut-Qwen: Affective Steering in a Vision-Language Model Shifts the Decision Criterion for Hazard Assessment",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "signal detection theory",
+    "task": "affective steering",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11986v1",
+    "title": "FearCaut-Qwen: Affective Steering in a Vision-Language Model Shifts the Decision Criterion for Hazard Assessment",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Qwen2.5-VL-7B-Instruct",
+    "task": "damage assessment",
+    "dataset": "SeisML",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11986v1",
+    "title": "FearCaut-Qwen: Affective Steering in a Vision-Language Model Shifts the Decision Criterion for Hazard Assessment",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "CAPABLE",
+    "task": "behavioral fault recovery",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11971v1",
+    "title": "CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "temporal encoder",
+    "task": "policy adaptation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11971v1",
+    "title": "CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "residual reinforcement learning",
+    "task": "policy adaptation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11971v1",
+    "title": "CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "SightCAD",
+    "task": "CAD reconstruction",
+    "dataset": "standard CAD benchmarks",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11954v1",
+    "title": "Look Where You Can: Active View Selection for CAD Reconstruction under Occlusion",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "joint training",
+    "task": "model training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11954v1",
+    "title": "Look Where You Can: Active View Selection for CAD Reconstruction under Occlusion",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "autoregressive generation",
+    "task": "model training",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11954v1",
+    "title": "Look Where You Can: Active View Selection for CAD Reconstruction under Occlusion",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "FARE",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11938v1",
+    "title": "Does Target Alignment Mean Target Recovery? An Evidence-Ladder Study of Adversarial Claims on Contrastive Encoders",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "TeCoA",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11938v1",
+    "title": "Does Target Alignment Mean Target Recovery? An Evidence-Ladder Study of Adversarial Claims on Contrastive Encoders",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "PMG",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11938v1",
+    "title": "Does Target Alignment Mean Target Recovery? An Evidence-Ladder Study of Adversarial Claims on Contrastive Encoders",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "AIMS",
+    "task": "hallucination mitigation",
+    "dataset": "Large Vision-Language Models (LVLMs",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11907v1",
+    "title": "Beyond Visual Enhancement: Adaptive Multi-Context Steering to Mitigate LVLM Hallucinations",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11907v1",
+    "title": "Beyond Visual Enhancement: Adaptive Multi-Context Steering to Mitigate LVLM Hallucinations",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "model modification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11907v1",
+    "title": "Beyond Visual Enhancement: Adaptive Multi-Context Steering to Mitigate LVLM Hallucinations",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "ResOT",
+    "task": "object hallucination mitigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11826v1",
+    "title": "From Suppression to Repair: Mitigating Object Hallucination in Large Vision-Language Models via Localized Distribution Alignment",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "localized distribution alignment",
+    "task": "object hallucination mitigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11826v1",
+    "title": "From Suppression to Repair: Mitigating Object Hallucination in Large Vision-Language Models via Localized Distribution Alignment",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Gaussian optimal transport (OT",
+    "task": "object hallucination mitigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11826v1",
+    "title": "From Suppression to Repair: Mitigating Object Hallucination in Large Vision-Language Models via Localized Distribution Alignment",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "open-source lightweight VLMs",
+    "task": "Optical Character Recognition (OCR)-to-structure",
+    "dataset": "university heritage collections",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11818v1",
+    "title": "From Pixels to Structure: Lightweight Vision-Language Models for Document OCR and Structured JSON Extraction",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "constraint-aware protocol",
+    "task": "model evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11818v1",
+    "title": "From Pixels to Structure: Lightweight Vision-Language Models for Document OCR and Structured JSON Extraction",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "fine-tuning baseline",
+    "task": "model evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11818v1",
+    "title": "From Pixels to Structure: Lightweight Vision-Language Models for Document OCR and Structured JSON Extraction",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Vantage",
+    "task": "multi-view spatial understanding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11810v1",
+    "title": "Seek-and-View Reasoning for Multi-View Spatial Understanding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11810v1",
+    "title": "Seek-and-View Reasoning for Multi-View Spatial Understanding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11810v1",
+    "title": "Seek-and-View Reasoning for Multi-View Spatial Understanding",
+    "topic": "multimodal_llm"
+  },
+  {
+    "method": "VFold",
+    "task": "code generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12338v1",
+    "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "high-ratio quantization",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12338v1",
+    "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "key cache pruning",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12338v1",
+    "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Connected Self Forcing",
+    "task": "video autoregression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12156v1",
+    "title": "Connected Self Forcing: Beyond Local Learning in Video Autoregression",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "shortcut gradient replay",
+    "task": "video autoregression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12156v1",
+    "title": "Connected Self Forcing: Beyond Local Learning in Video Autoregression",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "distribution matching distillation",
+    "task": "video autoregression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12156v1",
+    "title": "Connected Self Forcing: Beyond Local Learning in Video Autoregression",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "instruction-tuned models",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12085v1",
+    "title": "Is Memorization Context-Sensitive? Prefix-Based Extraction Beyond Isolated Prefixes",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "retrieved contexts",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12085v1",
+    "title": "Is Memorization Context-Sensitive? Prefix-Based Extraction Beyond Isolated Prefixes",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "open-weight",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12085v1",
+    "title": "Is Memorization Context-Sensitive? Prefix-Based Extraction Beyond Isolated Prefixes",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "QCOC",
+    "task": "tabular prediction",
+    "dataset": "OpenML-CC18",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11784v1",
+    "title": "Compile the Table: Query-Calibrated Operator Compression for Tabular In-Context Learning",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "QCOC",
+    "task": "tabular prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11784v1",
+    "title": "Compile the Table: Query-Calibrated Operator Compression for Tabular In-Context Learning",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "QCOC",
+    "task": "tabular prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11784v1",
+    "title": "Compile the Table: Query-Calibrated Operator Compression for Tabular In-Context Learning",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "TEV",
+    "task": "speculative decoding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11750v1",
+    "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "ExitTrain",
+    "task": "speculative decoding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11750v1",
+    "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11750v1",
+    "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "MAP4CS",
+    "task": "code retriever fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11727v1",
+    "title": "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "random sampling",
+    "task": "code retriever fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11727v1",
+    "title": "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "standard fine-tuning",
+    "task": "code retriever fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11727v1",
+    "title": "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "ProloNg",
+    "task": "long-horizon deductive reasoning",
+    "dataset": "synthetic testbed",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11592v1",
+    "title": "Probing for Long-Horizon Deductive Reasoning Capabilities in Language Models with Prolog",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "8 reasoning models",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11592v1",
+    "title": "Probing for Long-Horizon Deductive Reasoning Capabilities in Language Models with Prolog",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Prolog",
+    "task": "deductive logic",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11592v1",
+    "title": "Probing for Long-Horizon Deductive Reasoning Capabilities in Language Models with Prolog",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Generative Adversarial Loop (GAL",
+    "task": "algorithm discovery",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11458v1",
+    "title": "Generative Adversarial Loops",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Generative Adversarial Loop (GAL",
+    "task": "benchmark creation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11458v1",
+    "title": "Generative Adversarial Loops",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Generative Adversarial Loop (GAL",
+    "task": "algorithm discovery",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11458v1",
+    "title": "Generative Adversarial Loops",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "BioBigBird",
+    "task": "text generation",
+    "dataset": "Biomedical literature, clinical data",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11430v1",
+    "title": "BioBigBird: A Sparse Attention Model for Long-Range Dependency Processing in Biomedical Text",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "sparse attention mechanism",
+    "task": "text processing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11430v1",
+    "title": "BioBigBird: A Sparse Attention Model for Long-Range Dependency Processing in Biomedical Text",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "multi-task learning (MTL",
+    "task": "enhancement",
+    "dataset": "Named Entity Recognition, Relation Extraction benchmark results from BLURB benchmark",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11430v1",
+    "title": "BioBigBird: A Sparse Attention Model for Long-Range Dependency Processing in Biomedical Text",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RIT-RAG",
+    "task": "document navigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11370v1",
+    "title": "RIT-RAG: Navigating Document Corpora with Retrieval-Induced Trees",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "PageIndex",
+    "task": "document navigation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11370v1",
+    "title": "RIT-RAG: Navigating Document Corpora with Retrieval-Induced Trees",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RAG",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11370v1",
+    "title": "RIT-RAG: Navigating Document Corpora with Retrieval-Induced Trees",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RaReCache",
+    "task": "cross-model cache reuse",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11358v1",
+    "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "rank disagreement metric",
+    "task": "cache translation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11358v1",
+    "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "closed-form linear maps",
+    "task": "model family transfer",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11358v1",
+    "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CogMem",
+    "task": "language modeling",
+    "dataset": "LoCoMo, LongMemEval",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11314v1",
+    "title": "From Retrieval to Reconstruction: Constructing Evolvable Cognitive Memory for Long-Term Dialogue",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "rule-based controller",
+    "task": "language understanding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11314v1",
+    "title": "From Retrieval to Reconstruction: Constructing Evolvable Cognitive Memory for Long-Term Dialogue",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "graph operators",
+    "task": "information retrieval",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11314v1",
+    "title": "From Retrieval to Reconstruction: Constructing Evolvable Cognitive Memory for Long-Term Dialogue",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RAM-Net",
+    "task": "attention mechanism design",
+    "dataset": "pretrained Transformers",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11214v1",
+    "title": "Bridging KV-Cache Quantization and Linear Attention: From Theory to Pretrained Weight Migration",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "KV-cache quantization",
+    "task": "storage and computational costs of Transformers",
+    "dataset": "pretrained Transformers",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11214v1",
+    "title": "Bridging KV-Cache Quantization and Linear Attention: From Theory to Pretrained Weight Migration",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "linear attention",
+    "task": "attention mechanism design",
+    "dataset": "pretrained Transformers",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11214v1",
+    "title": "Bridging KV-Cache Quantization and Linear Attention: From Theory to Pretrained Weight Migration",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RAG-Stress",
+    "task": "probing the limits of evidence reliance",
+    "dataset": "TriviaQA-RC, HotpotQA, SearchQA",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11183v1",
+    "title": "RAG-Stress: Probing the Limits of Evidence Reliance in Retrieval-Augmented Generation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RAG-Stress",
+    "task": "examining the limits of evidence reliance",
+    "dataset": "TriviaQA-RC, HotpotQA, SearchQA",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11183v1",
+    "title": "RAG-Stress: Probing the Limits of Evidence Reliance in Retrieval-Augmented Generation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RAG-Stress",
+    "task": "examining the limits of evidence reliance",
+    "dataset": "TriviaQA-RC, HotpotQA, SearchQA, MedQA, English, Chinese",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11183v1",
+    "title": "RAG-Stress: Probing the Limits of Evidence Reliance in Retrieval-Augmented Generation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "PARCEL",
+    "task": "legal hallucination detection",
+    "dataset": "New York State Court of Appeals decisions",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10971v1",
+    "title": "When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "state-of-the-art LLMs",
+    "task": "natural language inference",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10971v1",
+    "title": "When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "state-of-the-art LLMs",
+    "task": "zero-shot evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10971v1",
+    "title": "When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Speedbump-P",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10929v1",
+    "title": "Speedbumps: Rejection Attacks on Speculative Decoding",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Speedbump-D",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10929v1",
+    "title": "Speedbumps: Rejection Attacks on Speculative Decoding",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "speculative rejection attacks",
+    "task": "adversarial attack",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10929v1",
+    "title": "Speedbumps: Rejection Attacks on Speculative Decoding",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Large Language Models",
+    "task": "Machine Translation Quality Annotation",
+    "dataset": "WMT23, WMT25",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10918v1",
+    "title": "Large Language Models for Machine Translation Quality Annotation: Humans and Models Are Both Challenged",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Large Language Models",
+    "task": "Machine Translation Quality Annotation",
+    "dataset": "Multidimensional Quality Metrics, Error Span Annotation",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10918v1",
+    "title": "Large Language Models for Machine Translation Quality Annotation: Humans and Models Are Both Challenged",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Humans",
+    "task": "Machine Translation Quality Annotation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10918v1",
+    "title": "Large Language Models for Machine Translation Quality Annotation: Humans and Models Are Both Challenged",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RFChipAgent",
+    "task": "analog/RF circuit design automation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10858v1",
+    "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RAG subsystem",
+    "task": "design knowledge extraction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10858v1",
+    "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "closed-loop hybrid circuit-sizing engine",
+    "task": "circuit sizing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10858v1",
+    "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RECAST",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10507v1",
+    "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RouterLM",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10507v1",
+    "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CompilerLM",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10507v1",
+    "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "EDR",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10411v1",
+    "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Markov reward process",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10411v1",
+    "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "temporal-difference gradient",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10411v1",
+    "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "ResidualQuant",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10381v1",
+    "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "LoRA",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10381v1",
+    "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10381v1",
+    "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "semantically null placebo",
+    "task": "dense retrieval",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10170v1",
+    "title": "Does Document Structure Help Dense Retrieval? A Placebo-Controlled Ablation of Four Mechanisms Across Two Corpora",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "hierarchical two-stage retrieval",
+    "task": "dense retrieval",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10170v1",
+    "title": "Does Document Structure Help Dense Retrieval? A Placebo-Controlled Ablation of Four Mechanisms Across Two Corpora",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "structure-aligned chunking",
+    "task": "dense retrieval",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10170v1",
+    "title": "Does Document Structure Help Dense Retrieval? A Placebo-Controlled Ablation of Four Mechanisms Across Two Corpora",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Black-Box Vector Search",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10135v1",
+    "title": "Attention via Black-Box Vector Search",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "priority sampling",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10135v1",
+    "title": "Attention via Black-Box Vector Search",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "MIPS index",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10135v1",
+    "title": "Attention via Black-Box Vector Search",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "GLA",
+    "task": "context extension",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10114v1",
+    "title": "Mechanics of Long-Context Hybrid Models Part 1.1: From Hybrid Attention to Hybrid Position",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "GDN",
+    "task": "context extension",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10114v1",
+    "title": "Mechanics of Long-Context Hybrid Models Part 1.1: From Hybrid Attention to Hybrid Position",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "SLA",
+    "task": "continual long-context pretraining",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10114v1",
+    "title": "Mechanics of Long-Context Hybrid Models Part 1.1: From Hybrid Attention to Hybrid Position",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "EntroPrefill",
+    "task": "text generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09757v1",
+    "title": "EntroPrefill: Renyi-Guided Context Pruning with Conditional Stability Guarantees for Retrieval-Augmented Generation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Renyi-guided",
+    "task": "text generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09757v1",
+    "title": "EntroPrefill: Renyi-Guided Context Pruning with Conditional Stability Guarantees for Retrieval-Augmented Generation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "transformer perturbation bound",
+    "task": "text generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09757v1",
+    "title": "EntroPrefill: Renyi-Guided Context Pruning with Conditional Stability Guarantees for Retrieval-Augmented Generation",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CABRA",
+    "task": "code understanding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10610v1",
+    "title": "Code Understanding is a Bottleneck for Coding Agents",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CABRA",
+    "task": "task difficulty evaluation",
+    "dataset": "SWE-bench Verified",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10610v1",
+    "title": "Code Understanding is a Bottleneck for Coding Agents",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CABRA",
+    "task": "code analysis",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10610v1",
+    "title": "Code Understanding is a Bottleneck for Coding Agents",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CHASE",
+    "task": "model engineering",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09476v1",
+    "title": "CHASE: Channel-Aligned Structure Exploitation for Geometry-Aware Model Engineering",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "CAGA",
+    "task": "model modification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09476v1",
+    "title": "CHASE: Channel-Aligned Structure Exploitation for Geometry-Aware Model Engineering",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "SAKV",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09476v1",
+    "title": "CHASE: Channel-Aligned Structure Exploitation for Geometry-Aware Model Engineering",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "query-adaptive rule",
+    "task": "retrieval diversification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09412v1",
+    "title": "Finding the Right Balance: Relevance and Diversity in LLM Retrieval",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "RNG-Score",
+    "task": "ranking",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09412v1",
+    "title": "Finding the Right Balance: Relevance and Diversity in LLM Retrieval",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "existing embeddings",
+    "task": "retrieval diversification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09412v1",
+    "title": "Finding the Right Balance: Relevance and Diversity in LLM Retrieval",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Agentic RAG",
+    "task": "mathematical reasoning",
+    "dataset": "public Cursor feedback",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09375v1",
+    "title": "From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "Customer Context Graph-backed Agent",
+    "task": "mathematical reasoning",
+    "dataset": "public Cursor feedback",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09375v1",
+    "title": "From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "null",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09375v1",
+    "title": "From Retrieval to Customer Context: Evaluating Frontier-Model Systems for Voice-of-Customer Analysis",
+    "topic": "rag_long_context"
+  },
+  {
+    "method": "SparseDecoding",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12327v1",
+    "title": "SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Hessian",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12327v1",
+    "title": "SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "pruning",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12327v1",
+    "title": "SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "EgoVoice",
+    "task": "spoken assistance",
+    "dataset": "HoloAssist video recordings",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12248v1",
+    "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "LLM",
+    "task": "proactive intervention",
+    "dataset": "closed and open-source models",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12248v1",
+    "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "source separation, speech resynthesis",
+    "task": "proactive spoken guidance",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12248v1",
+    "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "SciTBERT",
+    "task": "text classification",
+    "dataset": "scientific and technological text",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12207v1",
+    "title": "SciTBERT: A family of chronologically consistent language models for scientific and technological language processing",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "SciTBERT-CI",
+    "task": "text classification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12207v1",
+    "title": "SciTBERT: A family of chronologically consistent language models for scientific and technological language processing",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "pre-trained transformer models",
+    "task": "downstream tasks",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12207v1",
+    "title": "SciTBERT: A family of chronologically consistent language models for scientific and technological language processing",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "meta-analysis",
+    "task": "verbal deception detection",
+    "dataset": "6,136 classification models, 97 datasets",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12118v1",
+    "title": "A persistent accuracy ceiling in automated verbal deception detection",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "systematic review",
+    "task": "verbal deception detection",
+    "dataset": "289 reports",
+    "confidence": 0.8,
+    "arxiv_id": "2610.12118v1",
+    "title": "A persistent accuracy ceiling in automated verbal deception detection",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "accuracy analysis",
+    "task": "verbal deception detection",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12118v1",
+    "title": "A persistent accuracy ceiling in automated verbal deception detection",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "MIDAPN",
+    "task": "time series forecasting",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11924v1",
+    "title": "Revisiting Identity and Spectra Dispersion in Media-Bridged Time Series Forecasting: Linking Multivariate Signals and Narrative Flows",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "MIDAG",
+    "task": "time series forecasting",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11924v1",
+    "title": "Revisiting Identity and Spectra Dispersion in Media-Bridged Time Series Forecasting: Linking Multivariate Signals and Narrative Flows",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "SPConv",
+    "task": "time series forecasting",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11924v1",
+    "title": "Revisiting Identity and Spectra Dispersion in Media-Bridged Time Series Forecasting: Linking Multivariate Signals and Narrative Flows",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "PTP-U",
+    "task": "machine unlearning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11915v1",
+    "title": "Not Every Change Is Necessary: Recoverable Drift in Large Language Model Unlearning",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11915v1",
+    "title": "Not Every Change Is Necessary: Recoverable Drift in Large Language Model Unlearning",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "LoRA",
+    "task": "model modification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11915v1",
+    "title": "Not Every Change Is Necessary: Recoverable Drift in Large Language Model Unlearning",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "GRPODropout",
+    "task": "online reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11854v1",
+    "title": "GRPODropout: Less is More for Online Reinforcement Learning Rollouts",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "GRPO",
+    "task": "online reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11854v1",
+    "title": "GRPODropout: Less is More for Online Reinforcement Learning Rollouts",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "reward modification",
+    "task": "reinforcement learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11854v1",
+    "title": "GRPODropout: Less is More for Online Reinforcement Learning Rollouts",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "RAGenome",
+    "task": "genomic language modeling",
+    "dataset": "whole-genome alignments from 100 vertebrates",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11761v1",
+    "title": "RAGenome: Scaling Retrieval-Based Genomic Language Models to Long Contexts",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "MSA-based pretraining",
+    "task": "genomic language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11761v1",
+    "title": "RAGenome: Scaling Retrieval-Based Genomic Language Models to Long Contexts",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "RAGenome",
+    "task": "variant effect prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11761v1",
+    "title": "RAGenome: Scaling Retrieval-Based Genomic Language Models to Long Contexts",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "controlled pretraining",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11548v1",
+    "title": "Conditional Transfer from Controlled Pretraining Mixtures to Code",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "OpenCodeInstruct",
+    "task": "probing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11548v1",
+    "title": "Conditional Transfer from Controlled Pretraining Mixtures to Code",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "curated suite of synthetic tasks",
+    "task": "probing",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11548v1",
+    "title": "Conditional Transfer from Controlled Pretraining Mixtures to Code",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Fed-GRPO",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11502v1",
+    "title": "Fed-GRPO: Reward-Signal-Driven Federated Group Relative Policy Optimization",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "GRPO",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11502v1",
+    "title": "Fed-GRPO: Reward-Signal-Driven Federated Group Relative Policy Optimization",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "adaptive sparse communication",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11502v1",
+    "title": "Fed-GRPO: Reward-Signal-Driven Federated Group Relative Policy Optimization",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "SAGE",
+    "task": "visual grounding",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11469v1",
+    "title": "SAGE: Sink-Aware Guided Emphasis for Visual Grounding in Vision-Language Decoders",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "CLIP, ViT, DINOv3",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11469v1",
+    "title": "SAGE: Sink-Aware Guided Emphasis for Visual Grounding in Vision-Language Decoders",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "null",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11469v1",
+    "title": "SAGE: Sink-Aware Guided Emphasis for Visual Grounding in Vision-Language Decoders",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "SRSP",
+    "task": "text-to-speech",
+    "dataset": "ISCSLP 2026 CoT-TTS corpus",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11461v1",
+    "title": "Beyond Speech Captions: Speech-Rewarded Style Planning for Conversational Text-to-Speech",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "GRPO",
+    "task": "text-to-speech",
+    "dataset": "ISCSLP 2026 CoT-TTS corpus",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11461v1",
+    "title": "Beyond Speech Captions: Speech-Rewarded Style Planning for Conversational Text-to-Speech",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Base LLM",
+    "task": "text-to-speech",
+    "dataset": "ISCSLP 2026 CoT-TTS corpus",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11461v1",
+    "title": "Beyond Speech Captions: Speech-Rewarded Style Planning for Conversational Text-to-Speech",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "RISR",
+    "task": "mathematical reasoning",
+    "dataset": "LLM-SRBench",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11387v1",
+    "title": "RISR: Residual-Informed Scientific Equation Discovery with Large Language Models",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "residual encoder",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11387v1",
+    "title": "RISR: Residual-Informed Scientific Equation Discovery with Large Language Models",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "dual-view relational encoder",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11387v1",
+    "title": "RISR: Residual-Informed Scientific Equation Discovery with Large Language Models",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "EFRE",
+    "task": "continual learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11373v1",
+    "title": "From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "prompt optimization",
+    "task": "continual learning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11373v1",
+    "title": "From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11373v1",
+    "title": "From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "SignRAG",
+    "task": "sign language translation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11371v1",
+    "title": "SignRAG: Unified Retrieval-Augmented Gloss-Free Sign Language Translation",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "hierarchical pretraining",
+    "task": "sign language translation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11371v1",
+    "title": "SignRAG: Unified Retrieval-Augmented Gloss-Free Sign Language Translation",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "retrieval-aware reinforcement fine-tuning",
+    "task": "sign language translation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11371v1",
+    "title": "SignRAG: Unified Retrieval-Augmented Gloss-Free Sign Language Translation",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "RL-ARC",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11352v1",
+    "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "RLVR",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11352v1",
+    "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "uncertainty estimation",
+    "task": "calibration",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11352v1",
+    "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "PathLang",
+    "task": "language modeling",
+    "dataset": "clinical reports",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11329v1",
+    "title": "PathLang: A Language-Centered Benchmark for Vision-Language Models in Computational Pathology",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "PathLang",
+    "task": "zero-shot classification",
+    "dataset": "clinical reports",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11329v1",
+    "title": "PathLang: A Language-Centered Benchmark for Vision-Language Models in Computational Pathology",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "PathLang",
+    "task": "cross-modal retrieval",
+    "dataset": "clinical reports",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11329v1",
+    "title": "PathLang: A Language-Centered Benchmark for Vision-Language Models in Computational Pathology",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "row normalization",
+    "task": "high-dimensional multiclass classification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11309v1",
+    "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Adam",
+    "task": "high-dimensional multiclass classification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11309v1",
+    "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "Muon",
+    "task": "high-dimensional multiclass classification",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11309v1",
+    "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+    "topic": "alignment_rlhf"
+  },
+  {
+    "method": "attention-head activation similarities",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12304v1",
+    "title": "Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "small-world index",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12304v1",
+    "title": "Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "core scores, bridge scores",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.12304v1",
+    "title": "Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LS-LoRA",
+    "task": "fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11620v1",
+    "title": "Where to Adapt Matters: Layer-Selective Fine-Tuning for Capability Retention",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11620v1",
+    "title": "Where to Adapt Matters: Layer-Selective Fine-Tuning for Capability Retention",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Layer-Selective Fine-Tuning",
+    "task": "fine-tuning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11620v1",
+    "title": "Where to Adapt Matters: Layer-Selective Fine-Tuning for Capability Retention",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "local LLM agents",
+    "task": "data engineering artifacts evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11482v1",
+    "title": "Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "benchmark of mobility-workflow tasks",
+    "task": "evaluate LLM agents",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11482v1",
+    "title": "Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "closed-loop workspace condition",
+    "task": "evaluate LLM agents",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11482v1",
+    "title": "Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Deflating the Hessian",
+    "task": "multimodal diffusion transformers",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11315v1",
+    "title": "Deflating the Hessian: Rank-4 W4A4 Quantization for Multimodal Diffusion Transformers",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Deflating the Hessian",
+    "task": "quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11315v1",
+    "title": "Deflating the Hessian: Rank-4 W4A4 Quantization for Multimodal Diffusion Transformers",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Deflating the Hessian",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11315v1",
+    "title": "Deflating the Hessian: Rank-4 W4A4 Quantization for Multimodal Diffusion Transformers",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "MGRASRec",
+    "task": "sequential recommendation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11228v1",
+    "title": "Multimodal Graph Retrieval-Augmented Sequential Recommendation via Collaborative Filtering Paths",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "MLLMs",
+    "task": "sequential recommendation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11228v1",
+    "title": "Multimodal Graph Retrieval-Augmented Sequential Recommendation via Collaborative Filtering Paths",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "prompt",
+    "task": "sequential recommendation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11228v1",
+    "title": "Multimodal Graph Retrieval-Augmented Sequential Recommendation via Collaborative Filtering Paths",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LadderEdit",
+    "task": "Lifelong editing of LLMs",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11160v1",
+    "title": "LadderEdit: Edit-Level Residual Compression for Memory-Efficient Lifelong Editing of LLMs",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "Lifelong editing of LLMs",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.11160v1",
+    "title": "LadderEdit: Edit-Level Residual Compression for Memory-Efficient Lifelong Editing of LLMs",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LadderEdit",
+    "task": "Lifelong editing of LLMs",
+    "dataset": "ZsRE, CounterFact, WikiBigEdit benchmarks on LLaMA-3-8B, Mistral-7B, and Qwen2.5-7B",
+    "confidence": 0.8,
+    "arxiv_id": "2610.11160v1",
+    "title": "LadderEdit: Edit-Level Residual Compression for Memory-Efficient Lifelong Editing of LLMs",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "MASA",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10871v1",
+    "title": "Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Flash-OPD",
+    "task": "mathematical reasoning",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10871v1",
+    "title": "Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "model compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10871v1",
+    "title": "Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Lossy Compressive Text Autoencoders",
+    "task": "text generation",
+    "dataset": "web text data",
+    "confidence": 0.8,
+    "arxiv_id": "2610.10738v1",
+    "title": "Lossy Compressive Text Autoencoders",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "residual downscaling/upscaling",
+    "task": "text generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10738v1",
+    "title": "Lossy Compressive Text Autoencoders",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "BLEU, LLM-based judge",
+    "task": "text evaluation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10738v1",
+    "title": "Lossy Compressive Text Autoencoders",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "OrBIT",
+    "task": "embedding compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10385v1",
+    "title": "OrBIT: Structure-Guided Embedding Compression",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "OrBIT",
+    "task": "embedding compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10385v1",
+    "title": "OrBIT: Structure-Guided Embedding Compression",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "OrBIT",
+    "task": "embedding compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10385v1",
+    "title": "OrBIT: Structure-Guided Embedding Compression",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "SLDR",
+    "task": "adversarial defense",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10345v1",
+    "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "adversarial defense",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10345v1",
+    "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "dynamic routing",
+    "task": "adversarial defense",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10345v1",
+    "title": "SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "CARing",
+    "task": "diagnosis prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10641v1",
+    "title": "Coverage-Aware Reasoning with Medical Tokens for Diagnosis Prediction",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "residual quantization",
+    "task": "diagnosis prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10641v1",
+    "title": "Coverage-Aware Reasoning with Medical Tokens for Diagnosis Prediction",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Semantic IDs (SIDs",
+    "task": "diagnosis prediction",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.10641v1",
+    "title": "Coverage-Aware Reasoning with Medical Tokens for Diagnosis Prediction",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "LoRA",
+    "task": "sequential pricing",
+    "dataset": "synthetic demand models, marketplace data",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09985v1",
+    "title": "Marrying Pricing and Advertising with LLMs",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "online actor-critic algorithm",
+    "task": "sequential pricing",
+    "dataset": "synthetic demand models, marketplace data",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09985v1",
+    "title": "Marrying Pricing and Advertising with LLMs",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "evaluation framework",
+    "task": "algorithm evaluation",
+    "dataset": "synthetic demand models, marketplace data",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09985v1",
+    "title": "Marrying Pricing and Advertising with LLMs",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "TR-PTQ",
+    "task": "model quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09969v1",
+    "title": "TR-PTQ: High-Accuracy Integer-Only Transformer Post Training Quantization via Taylor Region Reformulation",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Taylor Region (TR",
+    "task": "model quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09969v1",
+    "title": "TR-PTQ: High-Accuracy Integer-Only Transformer Post Training Quantization via Taylor Region Reformulation",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "calibration-free optimization",
+    "task": "model quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09969v1",
+    "title": "TR-PTQ: High-Accuracy Integer-Only Transformer Post Training Quantization via Taylor Region Reformulation",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Layerwise Error Attribution",
+    "task": "network compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09877v1",
+    "title": "Layerwise Error Attribution for Fast and Robust Mixed-Precision Post-Training Quantization",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "simple allocation algorithm",
+    "task": "network compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09877v1",
+    "title": "Layerwise Error Attribution for Fast and Robust Mixed-Precision Post-Training Quantization",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Layerwise probabilistic analysis",
+    "task": "network compression",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09877v1",
+    "title": "Layerwise Error Attribution for Fast and Robust Mixed-Precision Post-Training Quantization",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Adam's epsilon",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09835v1",
+    "title": "A Deafening Silence: Catastrophic Forgetting Lives in the Output Embeddings of Tokens the Data Never Speaks",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "parameter freezing",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09835v1",
+    "title": "A Deafening Silence: Catastrophic Forgetting Lives in the Output Embeddings of Tokens the Data Never Speaks",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "increasing epsilon",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09835v1",
+    "title": "A Deafening Silence: Catastrophic Forgetting Lives in the Output Embeddings of Tokens the Data Never Speaks",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Dual-QK",
+    "task": "key-value caching",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09827v1",
+    "title": "Dual-QK: Sharp Queries and Flat Keys for Prunable 2-bit KV Caches",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "calibrated query and key statistics",
+    "task": "key-value caching",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09827v1",
+    "title": "Dual-QK: Sharp Queries and Flat Keys for Prunable 2-bit KV Caches",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "dynamic channel pruning",
+    "task": "key-value caching",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09827v1",
+    "title": "Dual-QK: Sharp Queries and Flat Keys for Prunable 2-bit KV Caches",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Shaer",
+    "task": "poetry generation",
+    "dataset": "Ashaar",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09756v1",
+    "title": "Shaer: Controlled Arabic Poetry Generation with Meter Subform and Semantic Conditioning",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "QLoRA-based supervised fine-tuning",
+    "task": "model adaptation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09756v1",
+    "title": "Shaer: Controlled Arabic Poetry Generation with Meter Subform and Semantic Conditioning",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Yehia-7B",
+    "task": "model adaptation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09756v1",
+    "title": "Shaer: Controlled Arabic Poetry Generation with Meter Subform and Semantic Conditioning",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Quantize by Drift",
+    "task": "mixed-precision post-training quantization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09227v1",
+    "title": "Quantize by Drift: Label-Free Mixed-Precision Post-Training Quantization for Text Embedders",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Quantize by Drift",
+    "task": "text embedder optimization",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09227v1",
+    "title": "Quantize by Drift: Label-Free Mixed-Precision Post-Training Quantization for Text Embedders",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "Quantize by Drift",
+    "task": "representation drift measurement",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09227v1",
+    "title": "Quantize by Drift: Label-Free Mixed-Precision Post-Training Quantization for Text Embedders",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "CanonQ",
+    "task": "language modeling",
+    "dataset": "WikiText-2",
+    "confidence": 0.8,
+    "arxiv_id": "2610.09202v1",
+    "title": "Few Bits, One Law: Toward W2A4KV2",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "CanonQ",
+    "task": "code generation",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09202v1",
+    "title": "Few Bits, One Law: Toward W2A4KV2",
+    "topic": "efficient_llm"
+  },
+  {
+    "method": "CanonQ",
+    "task": "language modeling",
+    "dataset": null,
+    "confidence": 0.8,
+    "arxiv_id": "2610.09202v1",
+    "title": "Few Bits, One Law: Toward W2A4KV2",
+    "topic": "efficient_llm"
+  }
+]

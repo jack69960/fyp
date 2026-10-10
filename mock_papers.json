@@ -1,0 +1,29 @@
+[
+    {
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "abstract": "BERT is a pre‑training method for sentiment analysis, evaluated on IMDB dataset.",
+        "year": 2019,
+        "url": "https://paperswithcode.com/paper/bert-pre-training-of-deep-bidirectional",
+        "pwc_methods": ["BERT"],
+        "pwc_tasks": ["sentiment analysis"],
+        "pwc_datasets": ["IMDB"]
+    },
+    {
+        "title": "GPT‑2: Language Models are Unsupervised Multitask Learners",
+        "abstract": "GPT‑2 is a generative language model for text generation task, tested on COCO dataset.",
+        "year": 2019,
+        "url": "https://paperswithcode.com/paper/gpt-2-language-models-are-unsupervised",
+        "pwc_methods": ["GPT‑2"],
+        "pwc_tasks": ["text generation"],
+        "pwc_datasets": ["COCO"]
+    },
+    {
+        "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+        "abstract": "RoBERTa improves BERT for sentiment analysis and named entity recognition, evaluated on GLUE benchmark.",
+        "year": 2019,
+        "url": "https://paperswithcode.com/paper/roberta-a-robustly-optimized-bert",
+        "pwc_methods": ["RoBERTa"],
+        "pwc_tasks": ["sentiment analysis", "named entity recognition"],
+        "pwc_datasets": ["GLUE"]
+    }
+]
