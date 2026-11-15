@@ -1,12 +1,20 @@
 import json
+import os
 from pathlib import Path
 from neo4j import GraphDatabase
 
+try:  # 读项目根目录的 .env，没有就退回下面的默认值
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 # ==================== Configuration ====================
-NEO4J_URI = "neo4j+ssc://7428d6cf.databases.neo4j.io"
-NEO4J_USER = "7428d6cf"
-NEO4J_PASSWORD = "uXchE9iGSJWZ8gCtJnHMiyGF4Wbbpyfpm3MCdBuBXBU"
-NEO4J_DATABASE = "7428d6cf"
+# 默认连本机 Neo4j Community（C:\Users\jack\neo4j），可用环境变量覆盖。
+NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "fyp-neo4j-2026")
+NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "neo4j")
 
 CLEAR_DATABASE = True    # Set to True once to wipe and reimport
 BATCH_SIZE = 100
@@ -105,7 +113,7 @@ def main():
     importer = Neo4jImporter()
     try:
         importer.run(cleaned)
-        print("\n[Done] Import complete! Open Neo4j Aura Console -> Query or Bloom.")
+        print("\n[Done] Import complete! 打开浏览器访问 http://localhost:7474 查看图谱。")
     finally:
         importer.close()
 

@@ -7,10 +7,18 @@ import tempfile
 import os
 
 # ==================== Configuration ====================
-NEO4J_URI = "neo4j+ssc://7428d6cf.databases.neo4j.io"
-NEO4J_USER = "7428d6cf"
-NEO4J_PASSWORD = "uXchE9iGSJWZ8gCtJnHMiyGF4Wbbpyfpm3MCdBuBXBU"
-NEO4J_DATABASE = "7428d6cf"
+# 默认连本机 Neo4j Community（C:\Users\jack\neo4j），可用环境变量覆盖。
+# 想临时切回云端 Aura，就在 .env 里设 NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD / NEO4J_DATABASE。
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "fyp-neo4j-2026")
+NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "neo4j")
 
 NODE_COLORS = {
     "Paper":  "#4C9BE8",   # 蓝
@@ -368,7 +376,11 @@ with tab_graph:
         st.subheader(title)
         html_path = build_pyvis(nodes, edges)
         with open(html_path, "r", encoding="utf-8") as f:
-            components.html(f.read(), height=720, scrolling=True)
+            graph_html = f.read()
+        if hasattr(st, "iframe"):  # Streamlit >= 1.6x：components.html 已弃用
+            st.iframe(graph_html, width="stretch", height=720, alt="知识图谱（可拖拽、缩放）")
+        else:
+            components.html(graph_html, height=720, scrolling=True)
         os.unlink(html_path)
 
 # ---------- Tab 2: Research Gaps ----------
@@ -396,7 +408,7 @@ with tab_gaps:
             df = df[df["类别"] == selected_cat]
         st.dataframe(
             df[["类别", "任务", "方法数量", "论文数量"]],
-            use_container_width=True, hide_index=True
+            width="stretch", hide_index=True
         )
         st.caption(f"当前显示 {len(df)} 条结果")
     else:
@@ -408,7 +420,7 @@ with tab_gaps:
     st.markdown("未连接到任何数据集的 Method，可能缺少标准化基准测试。")
     unevaluated = find_unevaluated_methods()
     if unevaluated:
-        st.dataframe(pd.DataFrame(unevaluated), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(unevaluated), width="stretch", hide_index=True)
     else:
         st.info("所有方法都至少连接了一个数据集。")
 
@@ -420,7 +432,7 @@ with tab_gaps:
     if orphans:
         df = pd.DataFrame(orphans)
         df["相关任务"] = df["相关任务"].apply(lambda x: ", ".join(x) if x else "（无）")
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, width="stretch", hide_index=True)
     else:
         st.info("没有发现孤立方法。")
 
@@ -432,6 +444,6 @@ with tab_gaps:
     if cross:
         df = pd.DataFrame(cross)
         df["涉及方向"] = df["涉及方向"].apply(lambda x: ", ".join(x))
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, width="stretch", hide_index=True)
     else:
         st.info("暂无跨方向方法。")
