@@ -1,30 +1,6 @@
 ACADEMIC KNOWLEDGE GRAPH EXPLORER
-===============================
-Final Year Project — an interactive knowledge graph of arXiv LLM research,
-built from method–task–dataset triples extracted from paper abstracts.
-
 Live demo (no installation needed):
     https://enoqqejpomw7a9vjhkwev7.streamlit.app/
-
-The app answers two kinds of questions:
-
-  1. Graph Explorer
-     Browse the subgraph around a research topic, or around one to three
-     tasks. A task subgraph has the shape
-         Task <- USED_FOR - Method <- PROPOSES - Paper
-                                   Method - EVALUATED_ON -> Dataset
-
-  2. Research Gaps
-     Heuristic candidate gaps derived from the same graph:
-       - rare tasks (only a few methods address them)
-       - methods never evaluated on a dataset
-       - orphan methods (proposed by a single paper)
-       - cross-topic methods (appear in more than one topic)
-
-Snapshot shipped in this repo: 1054 nodes / 1732 relationships
-  Paper 208, Method 477, Task 267, Dataset 102
-  PROPOSES 556, USED_FOR 558, ADDRESSES 385, EVALUATED_ON 131, USES 102
-
 
 QUICK START
 -----------
