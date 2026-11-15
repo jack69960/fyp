@@ -49,3 +49,10 @@ install-autostart.bat
 remove-autostart.bat
 # 全部关闭（Streamlit + Neo4j）：
 stop-app.bat
+
+# ===== 远程访问（手机 / 别的电脑）=====
+# 同一 Wi-Fi：http://192.168.3.182:8501（本机 WLAN 的 IP，换了网络要重新看 ipconfig）
+# 外网：手机装 Tailscale 并登录同一账号后打开 http://100.85.166.111:8501
+# 第一次从别的设备进来之前，先双击 allow-remote-access.bat 放行防火墙（点一次「是」就行）
+# 端口固定在 8501，绑定 0.0.0.0，配置在 .streamlit/config.toml
+# 想用固定 HTTPS 域名（https://laptop-94as84to.taila9417f.ts.net）：需要先在 Tailscale 管理台启用 Serve 一次

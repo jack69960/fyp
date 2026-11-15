@@ -58,6 +58,7 @@ def get_driver():
     return GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
 
+@st.cache_data(ttl=600, show_spinner=False)
 def run_query(query, **params):
     with get_driver().session(database=NEO4J_DATABASE) as session:
         return [dict(r) for r in session.run(query, **params)]

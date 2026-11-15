@@ -1,0 +1,13 @@
+# Streamlit 固定配置：不管用哪个启动器，行为都一样
+[server]
+address = "0.0.0.0"      # 监听所有网卡：本机 / 同一 Wi-Fi / Tailscale 都能进
+port = 8501
+headless = true          # 后台跑，不自动弹浏览器
+runOnSave = true
+fileWatcherType = "auto"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
