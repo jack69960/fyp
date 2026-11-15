@@ -7,18 +7,43 @@ import tempfile
 import os
 
 # ==================== Configuration ====================
-# 默认连本机 Neo4j Community（C:\Users\jack\neo4j），可用环境变量覆盖。
-# 想临时切回云端 Aura，就在 .env 里设 NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD / NEO4J_DATABASE。
+# 数据源按优先级自动选择：
+#   1) 云端部署时从 st.secrets["neo4j"] 读配置（连 Aura）
+#   2) 本地 .env / 环境变量（默认连本机 Neo4j Community）
+#   3) 数据库连不上时，自动退回 data/graph_export.json 快照 —— 云端免数据库也能跑
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except ImportError:
     pass
 
-NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
-NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "fyp-neo4j-2026")
-NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "neo4j")
+
+def _secrets_neo4j():
+    """读 Streamlit Cloud 的 Secrets；本地没有就返回 None。"""
+    try:
+        sec = st.secrets["neo4j"]
+        if sec.get("uri") and sec.get("password"):
+            return {
+                "uri": sec["uri"],
+                "user": sec.get("username", "neo4j"),
+                "password": sec["password"],
+                "database": sec.get("database", "neo4j"),
+            }
+    except Exception:
+        pass
+    return None
+
+
+_SECRETS = _secrets_neo4j()
+
+NEO4J_URI = _SECRETS["uri"] if _SECRETS else os.getenv("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USER = _SECRETS["user"] if _SECRETS else os.getenv("NEO4J_USER", "neo4j")
+NEO4J_PASSWORD = _SECRETS["password"] if _SECRETS else os.getenv("NEO4J_PASSWORD", "fyp-neo4j-2026")
+NEO4J_DATABASE = _SECRETS["database"] if _SECRETS else os.getenv("NEO4J_DATABASE", "neo4j")
+
+DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "graph_export.json")
+# 想强制用快照测试：FYP_FORCE_JSON=1
+FORCE_JSON = os.getenv("FYP_FORCE_JSON", "").lower() in {"1", "true", "yes"}
 
 NODE_COLORS = {
     "Paper":  "#4C9BE8",   # 蓝
@@ -53,14 +78,36 @@ TASK_CATEGORIES = {
 # ========================================================
 
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def get_driver():
-    return GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+    """连得上返回 driver；连不上（或强制快照模式）返回 None，用来判断走哪条数据源。"""
+    if FORCE_JSON:
+        return None
+    try:
+        driver = GraphDatabase.driver(
+            NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD), connection_timeout=3
+        )
+        driver.verify_connectivity()
+        return driver
+    except Exception:
+        return None
+
+
+_DRIVER = get_driver()
+USE_JSON = _DRIVER is None
+
+
+@st.cache_resource(show_spinner=False)
+def get_store():
+    """JSON 快照数据源（只有连不上数据库时才会用到）。"""
+    from graph_json import GraphStore
+
+    return GraphStore(DATA_FILE, node_to_dict)
 
 
 @st.cache_data(ttl=600, show_spinner=False)
 def run_query(query, **params):
-    with get_driver().session(database=NEO4J_DATABASE) as session:
+    with _DRIVER.session(database=NEO4J_DATABASE) as session:
         return [dict(r) for r in session.run(query, **params)]
 
 
@@ -89,12 +136,16 @@ def node_to_dict(node, label_type):
 
 # ==================== Data fetchers ====================
 def get_all_topics():
+    if USE_JSON:
+        return get_store().topics()
     rows = run_query("MATCH (p:Paper) RETURN DISTINCT p.topic AS topic ORDER BY topic")
     return [r["topic"] for r in rows if r["topic"]]
 
 
 def get_all_tasks():
     """返回任务列表，按关联方法数降序（越热门的越靠前）。"""
+    if USE_JSON:
+        return get_store().tasks()
     query = """
     MATCH (t:Task)<-[:USED_FOR]-(m:Method)
     WITH t, count(DISTINCT m) AS method_count
@@ -106,6 +157,8 @@ def get_all_tasks():
 
 def fetch_by_topic(topic, limit=80):
     """研究方向模式：以 Paper 为中心取子图。返回 (nodes, edges)。"""
+    if USE_JSON:
+        return get_store().topic_subgraph(topic, limit)
     query = """
     MATCH (p:Paper)-[r]-(n)
     WHERE p.topic = $topic
@@ -144,6 +197,8 @@ def fetch_by_tasks(task_names, max_methods=25):
                             Method - EVALUATED_ON -> Dataset
     多个 Task 共享同一 Method 时会自动连在一起。
     """
+    if USE_JSON:
+        return get_store().tasks_subgraph(task_names, max_methods)
     query = """
     MATCH (t:Task)<-[:USED_FOR]-(m:Method)
     WHERE t.name IN $tasks
@@ -265,8 +320,11 @@ def find_rare_tasks(min_methods, min_papers=2, min_name_len=6):
     RETURN t.name AS 任务, method_count AS 方法数量, paper_count AS 论文数量
     ORDER BY method_count ASC, paper_count DESC, 任务
     """
-    rows = run_query(query, min_methods=min_methods,
-                     min_papers=min_papers, min_name_len=min_name_len)
+    if USE_JSON:
+        rows = get_store().rare_tasks(min_methods, min_papers, min_name_len)
+    else:
+        rows = run_query(query, min_methods=min_methods,
+                         min_papers=min_papers, min_name_len=min_name_len)
     for r in rows:
         r["类别"] = categorize_task(r["任务"])
     return rows
@@ -283,6 +341,8 @@ def find_unevaluated_methods(min_papers=1):
     RETURN m.name AS 方法, paper_count AS 论文数量
     ORDER BY 论文数量 DESC, 方法
     """
+    if USE_JSON:
+        return get_store().unevaluated_methods(min_papers)
     return run_query(query, min_papers=min_papers)
 
 
@@ -296,6 +356,8 @@ def find_orphan_methods():
     RETURN m.name AS 方法, collect(DISTINCT t.name) AS 相关任务
     ORDER BY 方法
     """
+    if USE_JSON:
+        return get_store().orphan_methods()
     return run_query(query)
 
 
@@ -308,6 +370,8 @@ def find_cross_topic_methods():
     RETURN m.name AS 方法, topics AS 涉及方向
     ORDER BY size(topics) DESC
     """
+    if USE_JSON:
+        return get_store().cross_topic_methods()
     return run_query(query)
 
 
@@ -316,6 +380,10 @@ st.set_page_config(page_title="学术知识图谱探索器", layout="wide")
 st.title("🔬 学术知识图谱探索器")
 st.caption("从 arXiv 论文中抽取 method–task–dataset 三元组，构建可交互的研究图谱。")
 
+if USE_JSON and not os.path.exists(DATA_FILE):
+    st.error("没有连上 Neo4j，也没找到 data/graph_export.json 快照。请先运行 `python export_graph_json.py` 生成。")
+    st.stop()
+
 tab_graph, tab_gaps = st.tabs(["🔍 图谱探索", "💡 研究空白推荐"])
 
 # ---------- Tab 1: Graph Explorer ----------
@@ -323,6 +391,10 @@ with tab_graph:
     # --- Sidebar controls ---
     with st.sidebar:
         st.header("🎛️ 控制面板")
+        if USE_JSON:
+            st.caption("📦 数据源：内置快照 graph_export.json（不依赖数据库）")
+        else:
+            st.caption(f"🗄️ 数据源：Neo4j 实时库（{NEO4J_URI}）")
         mode = st.radio("探索模式", ["按研究方向", "按任务（推荐）"], index=1)
 
         if mode == "按研究方向":
@@ -432,7 +504,7 @@ with tab_gaps:
     orphans = find_orphan_methods()
     if orphans:
         df = pd.DataFrame(orphans)
-        df["相关任务"] = df["相关任务"].apply(lambda x: ", ".join(x) if x else "（无）")
+        df["相关任务"] = df["相关任务"].apply(lambda x: ", ".join(sorted(x)) if x else "（无）")
         st.dataframe(df, width="stretch", hide_index=True)
     else:
         st.info("没有发现孤立方法。")
@@ -444,7 +516,7 @@ with tab_gaps:
     cross = find_cross_topic_methods()
     if cross:
         df = pd.DataFrame(cross)
-        df["涉及方向"] = df["涉及方向"].apply(lambda x: ", ".join(x))
+        df["涉及方向"] = df["涉及方向"].apply(lambda x: ", ".join(sorted(x)))
         st.dataframe(df, width="stretch", hide_index=True)
     else:
         st.info("暂无跨方向方法。")

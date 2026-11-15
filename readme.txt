@@ -56,3 +56,18 @@ stop-app.bat
 # 第一次从别的设备进来之前，先双击 allow-remote-access.bat 放行防火墙（点一次「是」就行）
 # 端口固定在 8501，绑定 0.0.0.0，配置在 .streamlit/config.toml
 # 想用固定 HTTPS 域名（https://laptop-94as84to.taila9417f.ts.net）：需要先在 Tailscale 管理台启用 Serve 一次
+
+# ===== 数据源（app.py 自动选，不用改代码）=====
+# 1) 有 st.secrets["neo4j"]（Streamlit Cloud 的 Secrets）：用它连 Aura
+# 2) 否则读 .env / 环境变量：连本机 bolt://localhost:7687
+# 3) 数据库连不上（比如云端服务器）：自动退回 data/graph_export.json 快照，网页照常可用
+# 判断逻辑在 app.py 的 get_driver()；强制用快照测试：FYP_FORCE_JSON=1
+
+# ===== 云端版（Streamlit Community Cloud）=====
+# 公开地址：https://enoqqejpomw7a9vjhkwev7.streamlit.app/
+# 部署来源：GitHub jack69960/fyp 的 main 分支，push 后自动重新构建
+# 云端不连数据库，读的是仓库里的 data/graph_export.json
+
+# ===== 知识图谱有新增内容后，刷新快照 =====
+.\.venv\Scripts\python.exe export_graph_json.py
+# 然后 git add data/graph_export.json && git commit && git push，云端会重新构建
