@@ -7,10 +7,11 @@ import tempfile
 import os
 
 # ==================== Configuration ====================
-# 数据源按优先级自动选择：
-#   1) 云端部署时从 st.secrets["neo4j"] 读配置（连 Aura）
-#   2) 本地 .env / 环境变量（默认连本机 Neo4j Community）
-#   3) 数据库连不上时，自动退回 data/graph_export.json 快照 —— 云端免数据库也能跑
+# The data source is chosen automatically, in this order:
+#   1) st.secrets["neo4j"] on Streamlit Cloud (connects to an Aura instance)
+#   2) .env / environment variables (defaults to a local Neo4j Community server)
+#   3) if the database is unreachable, fall back to the data/graph_export.json
+#      snapshot, so the cloud deployment runs without any database at all.
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -19,7 +20,7 @@ except ImportError:
 
 
 def _secrets_neo4j():
-    """读 Streamlit Cloud 的 Secrets；本地没有就返回 None。"""
+    """Read Streamlit Cloud secrets; return None when running locally."""
     try:
         sec = st.secrets["neo4j"]
         if sec.get("uri") and sec.get("password"):
@@ -42,17 +43,17 @@ NEO4J_PASSWORD = _SECRETS["password"] if _SECRETS else os.getenv("NEO4J_PASSWORD
 NEO4J_DATABASE = _SECRETS["database"] if _SECRETS else os.getenv("NEO4J_DATABASE", "neo4j")
 
 DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "graph_export.json")
-# 想强制用快照测试：FYP_FORCE_JSON=1
+# Force the snapshot for testing: FYP_FORCE_JSON=1
 FORCE_JSON = os.getenv("FYP_FORCE_JSON", "").lower() in {"1", "true", "yes"}
 
 NODE_COLORS = {
-    "Paper":  "#4C9BE8",   # 蓝
-    "Method": "#7ED957",   # 绿
-    "Task":   "#F4D03F",   # 黄
-    "Dataset":"#E85C4C",   # 红
+    "Paper":  "#4C9BE8",   # blue
+    "Method": "#7ED957",   # green
+    "Task":   "#F4D03F",   # yellow
+    "Dataset":"#E85C4C",   # red
 }
 
-# 节点大小：Task 最大（视觉中心），Method 中等，Paper/Dataset 小
+# Node sizes: Task largest (visual anchor), Method medium, Paper/Dataset small
 NODE_SIZES = {
     "Task":   32,
     "Method": 20,
@@ -60,27 +61,27 @@ NODE_SIZES = {
     "Dataset":12,
 }
 
-# Task categorization（只用于"研究空白推荐"里展示分组）
+# Task categories (only used to group rows in the research-gap tab)
 TASK_CATEGORIES = {
-    "数学推理": ["math", "arithmetic", "geometric", "theorem", "equation"],
-    "代码生成": ["code", "program", "software", "compilation"],
-    "语言建模": ["language model", "text generation", "pretraining", "token"],
-    "智能体": ["agent", "planning", "decision", "multi-agent"],
-    "多模态": ["vision", "visual", "image", "video", "audio", "multimodal", "vlm"],
-    "检索增强": ["retrieval", "rag", "search", "knowledge base"],
-    "对齐与RLHF": ["alignment", "rlhf", "preference", "reward", "human feedback"],
-    "知识蒸馏": ["distill", "knowledge transfer", "compression", "teacher"],
-    "高效推理": ["quantization", "pruning", "efficient", "sparsity", "acceleration"],
-    "长上下文": ["long context", "long-context", "context extension"],
-    "测试时计算": ["test-time", "test time", "inference-time", "scaling"],
-    "安全与评估": ["safety", "jailbreak", "robustness", "evaluation", "benchmark"],
+    "Math Reasoning": ["math", "arithmetic", "geometric", "theorem", "equation"],
+    "Code Generation": ["code", "program", "software", "compilation"],
+    "Language Modeling": ["language model", "text generation", "pretraining", "token"],
+    "Agents": ["agent", "planning", "decision", "multi-agent"],
+    "Multimodal": ["vision", "visual", "image", "video", "audio", "multimodal", "vlm"],
+    "Retrieval": ["retrieval", "rag", "search", "knowledge base"],
+    "Alignment & RLHF": ["alignment", "rlhf", "preference", "reward", "human feedback"],
+    "Distillation": ["distill", "knowledge transfer", "compression", "teacher"],
+    "Efficient Inference": ["quantization", "pruning", "efficient", "sparsity", "acceleration"],
+    "Long Context": ["long context", "long-context", "context extension"],
+    "Test-Time Compute": ["test-time", "test time", "inference-time", "scaling"],
+    "Safety & Evaluation": ["safety", "jailbreak", "robustness", "evaluation", "benchmark"],
 }
 # ========================================================
 
 
 @st.cache_resource(show_spinner=False)
 def get_driver():
-    """连得上返回 driver；连不上（或强制快照模式）返回 None，用来判断走哪条数据源。"""
+    """Return a driver when the database is reachable, else None (snapshot mode)."""
     if FORCE_JSON:
         return None
     try:
@@ -99,7 +100,7 @@ USE_JSON = _DRIVER is None
 
 @st.cache_resource(show_spinner=False)
 def get_store():
-    """JSON 快照数据源（只有连不上数据库时才会用到）。"""
+    """Snapshot data source (only used when the database is unreachable)."""
     from graph_json import GraphStore
 
     return GraphStore(DATA_FILE, node_to_dict)
@@ -117,14 +118,14 @@ def categorize_task(task_name: str) -> str:
         for kw in keywords:
             if kw in t:
                 return category
-    return "其他"
+    return "Other"
 
 
 # ==================== Node/Edge helpers ====================
 def node_to_dict(node, label_type):
-    """把 Neo4j node 转成 pyvis 需要的结构。"""
+    """Turn a graph node into the structure pyvis expects."""
     if label_type == "Paper":
-        raw = node.get("title") or "无标题"
+        raw = node.get("title") or "Untitled"
         label = raw[:28] + ("..." if len(raw) > 28 else "")
         title = f"Paper: {raw}\nTopic: {node.get('topic','')}"
     else:
@@ -143,7 +144,7 @@ def get_all_topics():
 
 
 def get_all_tasks():
-    """返回任务列表，按关联方法数降序（越热门的越靠前）。"""
+    """Return tasks ordered by number of associated methods (most studied first)."""
     if USE_JSON:
         return get_store().tasks()
     query = """
@@ -156,7 +157,7 @@ def get_all_tasks():
 
 
 def fetch_by_topic(topic, limit=80):
-    """研究方向模式：以 Paper 为中心取子图。返回 (nodes, edges)。"""
+    """Topic mode: subgraph centred on Paper nodes. Returns (nodes, edges)."""
     if USE_JSON:
         return get_store().topic_subgraph(topic, limit)
     query = """
@@ -182,7 +183,7 @@ def fetch_by_topic(topic, limit=80):
         if nid not in nodes:
             nodes[nid] = node_to_dict(n, n_type)
 
-        # 方向以 Paper 为起点
+        # Orient the edge away from the Paper node.
         if r.start_node.element_id == p.element_id:
             edges.append((pid, nid, r.type))
         else:
@@ -192,10 +193,10 @@ def fetch_by_topic(topic, limit=80):
 
 def fetch_by_tasks(task_names, max_methods=25):
     """
-    任务模式：以 Task 为中心辐射。
-    结构：Task <- USED_FOR - Method <- PROPOSES - Paper
-                            Method - EVALUATED_ON -> Dataset
-    多个 Task 共享同一 Method 时会自动连在一起。
+    Task mode: subgraph radiating from Task nodes.
+    Shape: Task <- USED_FOR - Method <- PROPOSES - Paper
+                           Method - EVALUATED_ON -> Dataset
+    Tasks sharing a method are connected automatically.
     """
     if USE_JSON:
         return get_store().tasks_subgraph(task_names, max_methods)
@@ -254,7 +255,7 @@ def build_pyvis(nodes, edges):
     net = Network(height="700px", width="100%", directed=True,
                   bgcolor="#1e1e1e", font_color="white", notebook=False)
 
-    # 关键：用 set_options 注入 vis.js 原生配置，避免 pyvis 默认渲染问题
+    # Inject native vis.js options, bypassing pyvis defaults
     net.set_options("""
     var options = {
       "physics": {
@@ -294,12 +295,12 @@ def build_pyvis(nodes, edges):
             title=info["title"],
             color=NODE_COLORS.get(info["type"], "#999999"),
             size=NODE_SIZES.get(info["type"], 12),
-            # Task 节点给更大 mass，让它们占据视觉中心
+            # Give Task nodes more mass so they settle at the centre
             mass=3 if info["type"] == "Task" else 1
         )
 
     for src, dst, rel in edges:
-        # ⚠️ 用 title（悬停显示）而不是 label（会覆盖边线）
+        # Use title (hover tooltip) rather than label, which would cover the line
         net.add_edge(src, dst, title=rel)
 
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html", mode="w", encoding="utf-8")
@@ -317,8 +318,8 @@ def find_rare_tasks(min_methods, min_papers=2, min_name_len=6):
     WHERE method_count <= $min_methods
       AND paper_count >= $min_papers
       AND size(t.name) >= $min_name_len
-    RETURN t.name AS 任务, method_count AS 方法数量, paper_count AS 论文数量
-    ORDER BY method_count ASC, paper_count DESC, 任务
+    RETURN t.name AS task, method_count, paper_count
+    ORDER BY method_count ASC, paper_count DESC, task
     """
     if USE_JSON:
         rows = get_store().rare_tasks(min_methods, min_papers, min_name_len)
@@ -326,7 +327,7 @@ def find_rare_tasks(min_methods, min_papers=2, min_name_len=6):
         rows = run_query(query, min_methods=min_methods,
                          min_papers=min_papers, min_name_len=min_name_len)
     for r in rows:
-        r["类别"] = categorize_task(r["任务"])
+        r["category"] = categorize_task(r["task"])
     return rows
 
 
@@ -338,8 +339,8 @@ def find_unevaluated_methods(min_papers=1):
     OPTIONAL MATCH (p:Paper)-[:PROPOSES]->(m)
     WITH m, count(DISTINCT p) AS paper_count
     WHERE paper_count >= $min_papers
-    RETURN m.name AS 方法, paper_count AS 论文数量
-    ORDER BY 论文数量 DESC, 方法
+    RETURN m.name AS method, paper_count
+    ORDER BY paper_count DESC, method
     """
     if USE_JSON:
         return get_store().unevaluated_methods(min_papers)
@@ -353,8 +354,8 @@ def find_orphan_methods():
     WITH m, count(DISTINCT p) AS paper_count
     WHERE paper_count = 1
     OPTIONAL MATCH (m)-[:USED_FOR]->(t:Task)
-    RETURN m.name AS 方法, collect(DISTINCT t.name) AS 相关任务
-    ORDER BY 方法
+    RETURN m.name AS method, collect(DISTINCT t.name) AS related_tasks
+    ORDER BY method
     """
     if USE_JSON:
         return get_store().orphan_methods()
@@ -367,7 +368,7 @@ def find_cross_topic_methods():
     MATCH (p:Paper)-[:PROPOSES]->(m:Method)
     WITH m, collect(DISTINCT p.topic) AS topics
     WHERE size(topics) > 1
-    RETURN m.name AS 方法, topics AS 涉及方向
+    RETURN m.name AS method, topics
     ORDER BY size(topics) DESC
     """
     if USE_JSON:
@@ -376,147 +377,162 @@ def find_cross_topic_methods():
 
 
 # ==================== Page ====================
-st.set_page_config(page_title="学术知识图谱探索器", layout="wide")
-st.title("🔬 学术知识图谱探索器")
-st.caption("从 arXiv 论文中抽取 method–task–dataset 三元组，构建可交互的研究图谱。")
+st.set_page_config(page_title="Academic Knowledge Graph Explorer", layout="wide")
+st.title("🔬 Academic Knowledge Graph Explorer")
+st.caption("An interactive research map built from method–task–dataset triples extracted from arXiv papers.")
 
 if USE_JSON and not os.path.exists(DATA_FILE):
-    st.error("没有连上 Neo4j，也没找到 data/graph_export.json 快照。请先运行 `python export_graph_json.py` 生成。")
+    st.error("Could not reach Neo4j and the snapshot data/graph_export.json is missing. "
+             "Run `python export_graph_json.py` to generate it.")
     st.stop()
 
-tab_graph, tab_gaps = st.tabs(["🔍 图谱探索", "💡 研究空白推荐"])
+tab_graph, tab_gaps = st.tabs(["🔍 Graph Explorer", "💡 Research Gaps"])
 
 # ---------- Tab 1: Graph Explorer ----------
 with tab_graph:
     # --- Sidebar controls ---
     with st.sidebar:
-        st.header("🎛️ 控制面板")
+        st.header("🎛️ Controls")
         if USE_JSON:
-            st.caption("📦 数据源：内置快照 graph_export.json（不依赖数据库）")
+            st.caption("📦 Data source: bundled snapshot graph_export.json (no database required)")
         else:
-            st.caption(f"🗄️ 数据源：Neo4j 实时库（{NEO4J_URI}）")
-        mode = st.radio("探索模式", ["按研究方向", "按任务（推荐）"], index=1)
+            st.caption(f"🗄️ Data source: live Neo4j ({NEO4J_URI})")
+        mode = st.radio("Exploration mode", ["By research topic", "By task (recommended)"], index=1)
 
-        if mode == "按研究方向":
+        if mode == "By research topic":
             topics = get_all_topics()
             if not topics:
-                st.warning("数据库中暂无数据，请先运行 import_neo4j.py。")
+                st.warning("No data in the database. Run import_neo4j.py first.")
                 st.stop()
-            selected_topic = st.selectbox("选择研究方向", topics)
-            limit = st.slider("最多显示多少条关系", 20, 300, 60, 20)
+            selected_topic = st.selectbox("Research topic", topics)
+            limit = st.slider("Max relations to display", 20, 300, 60, 20)
 
         else:
             tasks = get_all_tasks()
             if not tasks:
-                st.warning("数据库中没有任务数据。")
+                st.warning("No tasks found in the database.")
                 st.stop()
             task_options = [t["task"] for t in tasks]
             default_tasks = task_options[:1] if task_options else []
             selected_tasks = st.multiselect(
-                "选择任务（可多选，最多 3 个）",
+                "Select tasks (up to 3)",
                 options=task_options,
                 default=default_tasks,
-                help="选多个任务时，共享的方法会自动把它们的图谱连起来。"
+                help="When several tasks share a method, the graph connects them automatically."
             )
             if len(selected_tasks) > 3:
                 selected_tasks = selected_tasks[:3]
-                st.info("最多同时显示 3 个任务。")
+                st.info("At most 3 tasks can be shown at once.")
 
         st.divider()
-        st.markdown("**图例**")
+        st.markdown("**Legend**")
         st.markdown(
-            f"- <span style='color:{NODE_COLORS['Task']}'>●</span> 任务 Task\n"
-            f"- <span style='color:{NODE_COLORS['Method']}'>●</span> 方法 Method\n"
-            f"- <span style='color:{NODE_COLORS['Paper']}'>●</span> 论文 Paper\n"
-            f"- <span style='color:{NODE_COLORS['Dataset']}'>●</span> 数据集 Dataset",
+            f"- <span style='color:{NODE_COLORS['Task']}'>●</span> Task\n"
+            f"- <span style='color:{NODE_COLORS['Method']}'>●</span> Method\n"
+            f"- <span style='color:{NODE_COLORS['Paper']}'>●</span> Paper\n"
+            f"- <span style='color:{NODE_COLORS['Dataset']}'>●</span> Dataset",
             unsafe_allow_html=True
         )
 
     # --- Main area ---
-    if mode == "按研究方向":
+    if mode == "By research topic":
         nodes, edges = fetch_by_topic(selected_topic, limit)
-        title = f"研究方向：`{selected_topic}` —— {len(nodes)} 个节点，{len(edges)} 条关系"
+        title = f"Research topic: `{selected_topic}` — {len(nodes)} nodes, {len(edges)} relations"
     else:
         if not selected_tasks:
-            st.info("请在左侧至少选择一个任务。")
+            st.info("Please select at least one task in the sidebar.")
             st.stop()
         nodes, edges = fetch_by_tasks(selected_tasks)
-        title = f"任务：{', '.join(selected_tasks)} —— {len(nodes)} 个节点，{len(edges)} 条关系"
+        title = f"Tasks: {', '.join(selected_tasks)} — {len(nodes)} nodes, {len(edges)} relations"
 
     if not nodes:
-        st.info("当前条件下没有找到子图数据。")
+        st.info("No subgraph matches the current filters.")
     else:
         st.subheader(title)
         html_path = build_pyvis(nodes, edges)
         with open(html_path, "r", encoding="utf-8") as f:
             graph_html = f.read()
-        if hasattr(st, "iframe"):  # Streamlit >= 1.6x：components.html 已弃用
-            st.iframe(graph_html, width="stretch", height=720, alt="知识图谱（可拖拽、缩放）")
+        if hasattr(st, "iframe"):  # Streamlit >= 1.6x: components.html is deprecated
+            st.iframe(graph_html, width="stretch", height=720, alt="Knowledge graph (drag to pan, scroll to zoom)")
         else:
             components.html(graph_html, height=720, scrolling=True)
         os.unlink(html_path)
 
 # ---------- Tab 2: Research Gaps ----------
 with tab_gaps:
-    st.header("💡 潜在研究空白推荐")
-    st.caption("基于知识图谱的简单启发式规则自动识别，仅供参考，具体结论需阅读论文验证。")
+    st.header("💡 Potential Research Gaps")
+    st.caption("Heuristic suggestions derived from the knowledge graph. Treat them as leads, not "
+               "conclusions — verify each one by reading the underlying papers.")
 
-    st.subheader("1. 冷门任务（方法数量少）")
+    st.subheader("1. Rare tasks (few associated methods)")
     st.markdown(
-        "关联方法数量很少的任务，可能是研究尚未充分覆盖的方向。"
-        "已自动过滤只被极少数论文提及的噪音任务。"
+        "Tasks with only a handful of associated methods may be under-explored. "
+        "Tasks mentioned by very few papers are filtered out as noise."
     )
     col_a, col_b = st.columns(2)
     with col_a:
-        min_methods = st.slider("每个任务最多关联多少个方法", 1, 5, 2)
+        min_methods = st.slider("Max methods per task", 1, 5, 2)
     with col_b:
-        min_papers = st.slider("至少被多少篇论文提及", 1, 5, 2)
+        min_papers = st.slider("Min papers mentioning the task", 1, 5, 2)
 
     rare_tasks = find_rare_tasks(min_methods, min_papers=min_papers)
     if rare_tasks:
-        df = pd.DataFrame(rare_tasks)
-        categories = ["全部"] + sorted(df["类别"].unique().tolist())
-        selected_cat = st.selectbox("只看某个类别", categories)
-        if selected_cat != "全部":
-            df = df[df["类别"] == selected_cat]
+        df = pd.DataFrame(rare_tasks).rename(columns={
+            "category": "Category", "task": "Task",
+            "method_count": "# Methods", "paper_count": "# Papers",
+        })
+        categories = ["All"] + sorted(df["Category"].unique().tolist())
+        selected_cat = st.selectbox("Filter by category", categories)
+        if selected_cat != "All":
+            df = df[df["Category"] == selected_cat]
         st.dataframe(
-            df[["类别", "任务", "方法数量", "论文数量"]],
+            df[["Category", "Task", "# Methods", "# Papers"]],
             width="stretch", hide_index=True
         )
-        st.caption(f"当前显示 {len(df)} 条结果")
+        st.caption(f"Showing {len(df)} row(s)")
     else:
-        st.info("在当前阈值下没有发现冷门任务。")
+        st.info("No rare tasks at the current thresholds.")
 
     st.divider()
 
-    st.subheader("2. 未在数据集上评估的方法")
-    st.markdown("未连接到任何数据集的 Method，可能缺少标准化基准测试。")
+    st.subheader("2. Methods never evaluated on a dataset")
+    st.markdown("Methods with no EVALUATED_ON edge to any dataset may lack a standardised benchmark.")
     unevaluated = find_unevaluated_methods()
     if unevaluated:
-        st.dataframe(pd.DataFrame(unevaluated), width="stretch", hide_index=True)
+        df = pd.DataFrame(unevaluated).rename(columns={
+            "method": "Method", "paper_count": "# Papers",
+        })
+        st.dataframe(df, width="stretch", hide_index=True)
     else:
-        st.info("所有方法都至少连接了一个数据集。")
+        st.info("Every method is linked to at least one dataset.")
 
     st.divider()
 
-    st.subheader("3. 孤立方法（仅 1 篇论文提出）")
-    st.markdown("仅被一篇论文提出的方法，可能是新兴方向，也可能是尚未被广泛跟进的工作。")
+    st.subheader("3. Orphan methods (proposed by a single paper)")
+    st.markdown("Methods introduced by only one paper: possibly an emerging direction, possibly "
+                "work that has not been followed up yet.")
     orphans = find_orphan_methods()
     if orphans:
-        df = pd.DataFrame(orphans)
-        df["相关任务"] = df["相关任务"].apply(lambda x: ", ".join(sorted(x)) if x else "（无）")
+        df = pd.DataFrame(orphans).rename(columns={
+            "method": "Method", "related_tasks": "Related tasks",
+        })
+        df["Related tasks"] = df["Related tasks"].apply(
+            lambda x: ", ".join(sorted(x)) if x else "—"
+        )
         st.dataframe(df, width="stretch", hide_index=True)
     else:
-        st.info("没有发现孤立方法。")
+        st.info("No orphan methods found.")
 
     st.divider()
 
-    st.subheader("4. 跨方向方法")
-    st.markdown("出现在多个研究方向中的方法，可能具有跨领域迁移潜力。")
+    st.subheader("4. Cross-topic methods")
+    st.markdown("Methods appearing in more than one research topic may have cross-domain transfer potential.")
     cross = find_cross_topic_methods()
     if cross:
-        df = pd.DataFrame(cross)
-        df["涉及方向"] = df["涉及方向"].apply(lambda x: ", ".join(sorted(x)))
+        df = pd.DataFrame(cross).rename(columns={
+            "method": "Method", "topics": "Topics",
+        })
+        df["Topics"] = df["Topics"].apply(lambda x: ", ".join(sorted(x)))
         st.dataframe(df, width="stretch", hide_index=True)
     else:
-        st.info("暂无跨方向方法。")
+        st.info("No cross-topic methods found.")

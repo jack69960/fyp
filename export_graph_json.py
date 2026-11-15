@@ -1,12 +1,13 @@
 """
-把本机 Neo4j 里的知识图谱导出成一份 JSON，供 Streamlit Cloud 版直接读取（不依赖数据库）。
+Export the knowledge graph from the local Neo4j instance to a JSON file, so the
+Streamlit Cloud deployment can read it directly without any database.
 
-用法：
+Usage:
     .\\.venv\\Scripts\\python.exe export_graph_json.py
 
-输出：data/graph_export.json
+Output: data/graph_export.json
 
-结构：
+Structure:
 {
   "nodes": [{"id": "4:abc:123", "label": "Paper", "props": {...}}, ...],
   "rels":  [{"start": "...", "end": "...", "type": "PROPOSES", "props": {...}}, ...]
@@ -57,8 +58,8 @@ def main():
         json.dump({"nodes": nodes, "rels": rels}, f, ensure_ascii=False, separators=(",", ":"))
 
     size_mb = os.path.getsize(OUT_PATH) / 1024 / 1024
-    print(f"导出完成：{OUT_PATH}")
-    print(f"节点 {len(nodes)} 个，关系 {len(rels)} 条，文件 {size_mb:.2f} MB")
+    print(f"Export complete: {OUT_PATH}")
+    print(f"{len(nodes)} nodes, {len(rels)} relationships, {size_mb:.2f} MB")
 
 
 if __name__ == "__main__":

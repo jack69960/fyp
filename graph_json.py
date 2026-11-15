@@ -1,8 +1,10 @@
 """
-离线图数据源：从 data/graph_export.json 读取知识图谱，用纯 Python 实现 app.py 需要的查询。
+Offline graph data source: loads data/graph_export.json and implements, in pure
+Python, the queries app.py needs.
 
-这样 Streamlit Cloud 版不需要连任何数据库也能完整运行（本地版仍然连真 Neo4j）。
-各方法返回的字段名与 app.py 里对应的 Cypher 查询完全一致。
+This lets the Streamlit Cloud deployment run without any database (the local
+version still talks to a real Neo4j instance). Every method returns the same
+field names as its Cypher counterpart in app.py.
 """
 
 import json
@@ -25,7 +27,8 @@ class GraphStore:
             self.nodes[n["id"]] = {"id": n["id"], "label": n["label"], "props": n["props"] or {}}
         self.rels = data["rels"]
 
-        # 邻接表：out[id] = [(rel, other_id)]，双向都记，方便按方向过滤
+        # Adjacency list: out[id] = [(rel, other_id)], both directions, so the
+        # caller can filter by edge direction.
         self.out = defaultdict(list)
         for r in self.rels:
             self.out[r["start"]].append((r, r["end"]))
@@ -35,13 +38,13 @@ class GraphStore:
         for n in self.nodes.values():
             self.by_label[n["label"]].append(n)
 
-    # ---------- 基础工具 ----------
+    # ---------- Helpers ----------
     def _name(self, node):
         props = node["props"]
         return props.get("name") or props.get("title") or "?"
 
     def _neighbors(self, node_id, rel_type, direction):
-        """direction: 'out' 表示 rel 的 start 是 node_id，'in' 表示 end 是 node_id。"""
+        """direction: 'out' means the relation starts at node_id, 'in' means it ends there."""
         result = []
         for rel, other in self.out.get(node_id, []):
             if rel["type"] != rel_type:
@@ -61,7 +64,7 @@ class GraphStore:
             nodes[key] = self.node_to_dict(node["props"], node["label"])
         return key
 
-    # ---------- Tab 1：图谱浏览 ----------
+    # ---------- Tab 1: graph explorer ----------
     def topics(self):
         return sorted({n["props"].get("topic") for n in self.by_label.get("Paper", []) if n["props"].get("topic")})
 
@@ -130,7 +133,7 @@ class GraphStore:
                     add_edge(mid, did, EVALUATED_ON)
         return nodes, edges
 
-    # ---------- Tab 2：研究空白 ----------
+    # ---------- Tab 2: research gaps ----------
     def rare_tasks(self, min_methods, min_papers=2, min_name_len=6):
         rows = []
         for t in self.by_label.get("Task", []):
@@ -140,8 +143,8 @@ class GraphStore:
             method_count = len({m for m in self._neighbors(t["id"], USED_FOR, "in")})
             paper_count = len({p for p in self._neighbors(t["id"], ADDRESSES, "in")})
             if method_count <= min_methods and paper_count >= min_papers:
-                rows.append({"任务": name, "方法数量": method_count, "论文数量": paper_count})
-        rows.sort(key=lambda r: (r["方法数量"], -r["论文数量"], r["任务"]))
+                rows.append({"task": name, "method_count": method_count, "paper_count": paper_count})
+        rows.sort(key=lambda r: (r["method_count"], -r["paper_count"], r["task"]))
         return rows
 
     def unevaluated_methods(self, min_papers=1):
@@ -151,8 +154,8 @@ class GraphStore:
                 continue
             paper_count = len({p for p in self._neighbors(m["id"], PROPOSES, "in")})
             if paper_count >= min_papers:
-                rows.append({"方法": self._name(m), "论文数量": paper_count})
-        rows.sort(key=lambda r: (-r["论文数量"], r["方法"]))
+                rows.append({"method": self._name(m), "paper_count": paper_count})
+        rows.sort(key=lambda r: (-r["paper_count"], r["method"]))
         return rows
 
     def orphan_methods(self):
@@ -164,8 +167,8 @@ class GraphStore:
             tasks = sorted({self._name(self.nodes[t])
                             for t in self._neighbors(m["id"], USED_FOR, "out")
                             if t in self.nodes})
-            rows.append({"方法": self._name(m), "相关任务": tasks})
-        rows.sort(key=lambda r: r["方法"])
+            rows.append({"method": self._name(m), "related_tasks": tasks})
+        rows.sort(key=lambda r: r["method"])
         return rows
 
     def cross_topic_methods(self):
@@ -179,6 +182,6 @@ class GraphStore:
                     if topic:
                         topics.add(topic)
             if len(topics) > 1:
-                rows.append({"方法": self._name(m), "涉及方向": sorted(topics)})
-        rows.sort(key=lambda r: -len(r["涉及方向"]))
+                rows.append({"method": self._name(m), "topics": sorted(topics)})
+        rows.sort(key=lambda r: -len(r["topics"]))
         return rows

@@ -1,73 +1,224 @@
-# 如果还没有虚拟环境，先建一个
-python -m venv .venv
+ACADEMIC KNOWLEDGE GRAPH EXPLORER
+===============================
+Final Year Project — an interactive knowledge graph of arXiv LLM research,
+built from method–task–dataset triples extracted from paper abstracts.
+
+Live demo (no installation needed):
+    https://enoqqejpomw7a9vjhkwev7.streamlit.app/
+
+The app answers two kinds of questions:
+
+  1. Graph Explorer
+     Browse the subgraph around a research topic, or around one to three
+     tasks. A task subgraph has the shape
+         Task <- USED_FOR - Method <- PROPOSES - Paper
+                                   Method - EVALUATED_ON -> Dataset
+
+  2. Research Gaps
+     Heuristic candidate gaps derived from the same graph:
+       - rare tasks (only a few methods address them)
+       - methods never evaluated on a dataset
+       - orphan methods (proposed by a single paper)
+       - cross-topic methods (appear in more than one topic)
+
+Snapshot shipped in this repo: 1054 nodes / 1732 relationships
+  Paper 208, Method 477, Task 267, Dataset 102
+  PROPOSES 556, USED_FOR 558, ADDRESSES 385, EVALUATED_ON 131, USES 102
 
 
-.\.venv\Scripts\Activate.ps1
-pip install -U pip
-pip install arxiv ollama pydantic tqdm neo4j networkx streamlit pyvis
+QUICK START
+-----------
+    cd C:\Users\jack\Desktop\fyp
+    python -m venv .venv                      (only if .venv does not exist yet)
+    .\.venv\Scripts\Activate.ps1
+    python -m pip install -U pip
+    python -m pip install -r requirements.txt
 
-python arxiv_kg_build.py
-配置 Ollama（本地 LLM）:
-安装：https://ollama.com/download
-安装后重启 VS Code
-终端验证：
-PowerShellollama --version
-ollama pull qwen2.5:3b
-test:ollama run qwen2.5:3b "你好"
-启动：
-cd C:\Users\jack\Desktop\fyp
-.\.venv\Scripts\Activate.ps1
-.\.venv\Scripts\python.exe -m pip install ollama pydantic tqdm
-.\.venv\Scripts\python.exe extract_triples.py
+Then start everything with the one-click launcher:
 
-cd C:\Users\jack\Desktop\fyp
-.\.venv\Scripts\Activate.ps1
-pip install neo4j
-python import_neo4j.py
+    start-app.bat
+
+It starts Neo4j, waits until port 7687 answers, starts Streamlit on port 8501
+and opens the browser. To shut everything down:
+
+    stop-app.bat
+
+To start the app manually instead:
+
+    .\.venv\Scripts\python.exe -m streamlit run app.py
+    -> http://localhost:8501
 
 
-streamlit run app.py
-然后回车跳过
+PREREQUISITES
+-------------
+  * Windows 10/11, PowerShell
+  * Python 3.10+ (this project was developed on 3.13)
+  * Neo4j 5.x Community — optional. Without a database the app automatically
+    falls back to the bundled snapshot (data/graph_export.json) and still runs.
+  * Ollama — only needed if you want to re-extract triples with the local LLM.
 
-# ===== 本地 Neo4j（已装好，不再用云端 Aura）=====
-# 数据库：Neo4j Community 5.26 便携版 + JDK 21，都在 C:\Users\jack\neo4j
-# 启动数据库（开一个窗口跑着，别关）：
-C:\Users\jack\neo4j\start-neo4j.bat
-# 停止数据库：
-C:\Users\jack\neo4j\stop-neo4j.bat
-# 浏览器打开 http://localhost:7474 ，用户名 neo4j，密码 fyp-neo4j-2026
-# 连接串：bolt://localhost:7687（app.py / import_neo4j.py 已改好，默认就是它）
-# 换连接信息改项目根目录的 .env（NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD / NEO4J_DATABASE）
-# 这个 .env 已经在 .gitignore 里，密码不会提交上去
-# 想临时切回云端 Aura：把这四行改成 Aura 的连接串就行（旧的 Aura 连接信息在 git 历史里）
-# 数据文件在 C:\Users\jack\neo4j\neo4j-community-5.26.0\data，备份就直接复制这个文件夹
-# 一键启动（自动拉起数据库 -> 等就绪 -> 拉 Streamlit -> 开浏览器）：
-start-app.bat
-# 开机自动后台启动（装一次就行，不需要管理员）：
-install-autostart.bat
-# 取消开机自启：
-remove-autostart.bat
-# 全部关闭（Streamlit + Neo4j）：
-stop-app.bat
 
-# ===== 远程访问（手机 / 别的电脑）=====
-# 同一 Wi-Fi：http://192.168.3.182:8501（本机 WLAN 的 IP，换了网络要重新看 ipconfig）
-# 外网：手机装 Tailscale 并登录同一账号后打开 http://100.85.166.111:8501
-# 第一次从别的设备进来之前，先双击 allow-remote-access.bat 放行防火墙（点一次「是」就行）
-# 端口固定在 8501，绑定 0.0.0.0，配置在 .streamlit/config.toml
-# 想用固定 HTTPS 域名（https://laptop-94as84to.taila9417f.ts.net）：需要先在 Tailscale 管理台启用 Serve 一次
+REBUILDING THE DATASET FROM SCRATCH (reproduction steps)
+-------------------------------------------------------
+Run the following steps in order from the repository root. Each step writes
+into data/, so you can inspect the intermediate files.
 
-# ===== 数据源（app.py 自动选，不用改代码）=====
-# 1) 有 st.secrets["neo4j"]（Streamlit Cloud 的 Secrets）：用它连 Aura
-# 2) 否则读 .env / 环境变量：连本机 bolt://localhost:7687
-# 3) 数据库连不上（比如云端服务器）：自动退回 data/graph_export.json 快照，网页照常可用
-# 判断逻辑在 app.py 的 get_driver()；强制用快照测试：FYP_FORCE_JSON=1
+Step 1 — collect papers from arXiv
 
-# ===== 云端版（Streamlit Community Cloud）=====
-# 公开地址：https://enoqqejpomw7a9vjhkwev7.streamlit.app/
-# 部署来源：GitHub jack69960/fyp 的 main 分支，push 后自动重新构建
-# 云端不连数据库，读的是仓库里的 data/graph_export.json
+    .\.venv\Scripts\python.exe arxiv_kg_build.py
 
-# ===== 知识图谱有新增内容后，刷新快照 =====
-.\.venv\Scripts\python.exe export_graph_json.py
-# 然后 git add data/graph_export.json && git commit && git push，云端会重新构建
+  Reads the TOPICS table at the top of arxiv_kg_build.py (8 research topics
+  such as opd, test_time_compute, moe, llm_agents), fetches up to 30 recent
+  papers per topic (last 900 days, MAX_RESULTS_PER_TOPIC / DAYS_BACK), and
+  writes data/arxiv_raw/papers_YYYYMMDD_HHMM.json.
+
+Step 2 — install and verify the local LLM
+
+    https://ollama.com/download
+    ollama --version
+    ollama pull qwen2.5:3b
+    ollama run qwen2.5:3b "hello"          (sanity check, then leave with /exit)
+
+Step 3 — extract triples
+
+    .\.venv\Scripts\python.exe extract_triples.py
+
+  Sends every paper title + abstract to qwen2.5:3b with a JSON-schema
+  constrained prompt, keeps at most 3 triples per paper, and writes
+  data/extracted/triples_YYYYMMDD_HHMM.json (+ an *_unmapped.json of papers
+  whose answer could not be parsed). The shipped run produced 624 triples.
+
+Step 4 — start Neo4j and import the triples
+
+    C:\Users\jack\neo4j\start-neo4j.bat          (keep this window open)
+    http://localhost:7474                        (user: neo4j)
+    .\.venv\Scripts\python.exe import_neo4j.py
+
+  The importer clears the database (CLEAR_DATABASE = True), creates the
+  Paper / Method / Task / Dataset nodes and the PROPOSES, USES, USED_FOR,
+  ADDRESSES, EVALUATED_ON relationships, and prints the final counts.
+
+Step 5 — export the snapshot used by the cloud deployment
+
+    .\.venv\Scripts\python.exe export_graph_json.py
+
+  Writes data/graph_export.json (about 0.36 MB for the current graph). Commit
+  this file when the graph changes — the Streamlit Cloud app reads it.
+
+
+RUNNING THE APP
+---------------
+One-click:
+
+    start-app.bat            start Neo4j + Streamlit + open the browser
+    stop-app.bat             stop Streamlit and Neo4j
+    install-autostart.bat    start the app hidden at every logon
+    remove-autostart.bat     undo install-autostart.bat
+
+Manual / for debugging (console output visible):
+
+    C:\Users\jack\neo4j\start-neo4j.bat
+    .\.venv\Scripts\python.exe -m streamlit run app.py
+
+The server is pinned to port 8501 and listens on 0.0.0.0, both configured in
+.streamlit/config.toml.
+
+
+ACCESS FROM OTHER DEVICES
+-------------------------
+Same Wi-Fi:
+
+    http://<this-pc-lan-ip>:8501        e.g. http://192.168.3.182:8501
+    (check the current address with `ipconfig`)
+
+Over the internet, through Tailscale (both devices logged into the same
+account):
+
+    http://100.85.166.111:8501
+
+Before the first connection from another device, double-click
+allow-remote-access.bat once and approve the UAC prompt: it opens TCP 8501 in
+Windows Firewall for the private and public profiles.
+
+
+CLOUD DEPLOYMENT (Streamlit Community Cloud)
+-------------------------------------------
+  * Source:  GitHub repository jack69960/fyp, branch main
+  * URL:     https://enoqqejpomw7a9vjhkwev7.streamlit.app/
+  * Data:    the repository copy of data/graph_export.json — no database is
+             needed in the cloud
+  * Deploy:  every push to main triggers a rebuild; the app sleeps after a
+             period of inactivity and wakes up when the URL is opened again
+
+If you ever want the cloud app to query a live Neo4j Aura instance instead,
+add a [neo4j] section with uri / username / password / database to the app's
+Secrets in Streamlit Cloud. The app prefers those secrets when they exist.
+
+
+CONFIGURATION
+-------------
+Data source is selected automatically, in this order:
+
+  1. st.secrets["neo4j"]     Streamlit Cloud secrets (Aura)
+  2. .env / environment      local Neo4j Community
+  3. data/graph_export.json  snapshot, used when 1 and 2 are unreachable
+
+Environment variables (read from .env in the repository root):
+
+    NEO4J_URI         default bolt://localhost:7687
+    NEO4J_USER        default neo4j
+    NEO4J_PASSWORD    the password of your local instance
+    NEO4J_DATABASE    default neo4j
+    FYP_FORCE_JSON=1  ignore the database and use the snapshot (testing)
+
+.env is listed in .gitignore, so credentials are never committed. The command
+shown in the sidebar ("Data source: live Neo4j" vs "bundled snapshot") tells
+you which path was taken.
+
+
+REPOSITORY LAYOUT
+-----------------
+    app.py                    Streamlit UI (graph explorer + research gaps)
+    graph_json.py             pure-Python query layer over the JSON snapshot
+    export_graph_json.py      Neo4j -> data/graph_export.json exporter
+    import_neo4j.py           triples JSON -> Neo4j importer
+    extract_triples.py        Ollama extraction of triples from abstracts
+    arxiv_kg_build.py         arXiv harvester for paper metadata
+    data/arxiv_raw/           raw paper metadata
+    data/extracted/           extracted triples
+    data/graph_export.json    graph snapshot consumed by the cloud app
+    .streamlit/config.toml    server address / port / theme
+    start-app.bat ...         one-click launchers (see above)
+
+
+TROUBLESHOOTING
+---------------
+  Sidebar says "bundled snapshot" while running locally
+      Neo4j is not running or the credentials in .env are wrong. Start it with
+      C:\Users\jack\neo4j\start-neo4j.bat and check http://localhost:7474.
+
+  "Could not reach Neo4j and the snapshot ... is missing"
+      Neo4j is down and data/graph_export.json was not committed. Run
+      export_graph_json.py (or start the database) and reload.
+
+  Port 8501 already in use
+      An older Streamlit process is still alive: run stop-app.bat, then
+      start-app.bat again.
+
+  Another device cannot open the page
+      Run allow-remote-access.bat once (firewall), confirm both devices are
+      on the same network (or the same Tailscale account), and check ipconfig.
+
+  Extraction returns many unmapped papers
+      qwen2.5:3b occasionally answers with malformed JSON; check the
+      *_unmapped.json file next to the triples and re-run extract_triples.py.
+
+
+NOTES
+-----
+  * The local Neo4j data lives in C:\Users\jack\neo4j\neo4j-community-5.26.0\data;
+    back it up by copying that folder while the database is stopped.
+  * data/ is what makes the cloud deployment work without a database — commit
+    graph_export.json whenever the graph changes.
+  * Never commit .env or any Aura credentials. If a password has ever been
+    pushed to a public repository, rotate it in the Neo4j Aura console.
