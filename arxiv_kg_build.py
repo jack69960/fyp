@@ -1,12 +1,12 @@
 import arxiv
 import json
+import argparse
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from collections import Counter
 from tqdm import tqdm
 
-# ==================== Configuration ====================
 TOPICS = {
     # ==================== 1. On-Policy Distillation ====================
     "opd": [
@@ -134,16 +134,20 @@ TOPICS = {
     ],
 }
 
-MAX_RESULTS_PER_TOPIC = 30      # Number of papers per topic
-DAYS_BACK = 900                 # Only fetch papers from the last N days; None = no limit
+# Defaults can be overridden from the command line, for example:
+#   python arxiv_kg_build.py --per-topic 150 --days 1825
+#   python arxiv_kg_build.py --topics opd,moe --per-topic 200
+#   python arxiv_kg_build.py --days 0              (no time limit at all)
+MAX_RESULTS_PER_TOPIC = 100     # papers per topic (30 in the shipped run)
+DAYS_BACK = 900                # last N days of submissions; 0 = no limit
 OUTPUT_DIR = Path("data/arxiv_raw")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# Rate limiting
-PAGE_SIZE = 25
-DELAY_SECONDS = 5.0             # Delay between API requests
-SLEEP_PER_PAPER = 1.0           # Additional wait per paper
-SLEEP_BETWEEN_TOPICS = 10       # Wait between topics
+# Rate limiting — arXiv asks for no more than one request every 3 seconds.
+PAGE_SIZE = 25                  # results per API request
+DELAY_SECONDS = 5.0             # delay between API requests
+SLEEP_BETWEEN_TOPICS = 10       # wait between topics
+SAVE_AFTER_EACH_TOPIC = True    # a crash on topic 6 still keeps topics 1-5
 # ============================================================
 
 def build_query(keywords):
@@ -151,10 +155,15 @@ def build_query(keywords):
     category_part = "(cat:cs.LG OR cat:cs.AI OR cat:cs.CL OR cat:cs.CV OR cat:stat.ML)"
     return f"({keyword_part}) AND {category_part}"
 
-def fetch_papers(topic_name, keywords, max_results=80):
-    print(f"\nFetching topic: {topic_name} ...")
+def fetch_papers(topic_name, keywords, max_results, days_back):
+    print(f"\nFetching topic: {topic_name} (target {max_results} papers) ...")
     query = build_query(keywords)
     print(f"Query: {query[:120]}...")
+
+    cutoff = None
+    if days_back:
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days_back)
+        print(f"  Keeping papers published since {cutoff.strftime('%Y-%m-%d')}")
 
     search = arxiv.Search(
         query=query,
@@ -177,12 +186,10 @@ def fetch_papers(topic_name, keywords, max_results=80):
         for result in client.results(search):
             pbar.update(1)
 
-            # Time filter: since results are sorted descending, break early once out of range
-            if DAYS_BACK is not None:
-                cutoff = datetime.now(result.published.tzinfo) - timedelta(days=DAYS_BACK)
-                if result.published < cutoff:
-                    print(f"\n  Reached time cutoff ({cutoff.strftime('%Y-%m-%d')}), stopping early for {topic_name}.")
-                    break
+            # Results are sorted newest first, so the first old paper ends this topic
+            if cutoff is not None and result.published < cutoff:
+                print(f"\n  Reached time cutoff ({cutoff.strftime('%Y-%m-%d')}), stopping early for {topic_name}.")
+                break
 
             # Isolate per-paper parsing errors
             try:
@@ -205,8 +212,6 @@ def fetch_papers(topic_name, keywords, max_results=80):
             if len(papers) >= max_results:
                 break
 
-            time.sleep(SLEEP_PER_PAPER)
-
     except Exception as e:
         print(f"\n  [Fetch Interrupted] Exception: {e}")
         print(f"  Collected {len(papers)} papers so far, will save and continue to next topic.")
@@ -216,25 +221,72 @@ def fetch_papers(topic_name, keywords, max_results=80):
     print(f"-> Topic {topic_name} done, fetched {len(papers)} papers")
     return papers
 
-def main():
-    all_papers = []
-    seen_ids = set()
 
-    for topic_name, keywords in TOPICS.items():
-        papers = fetch_papers(topic_name, keywords, max_results=MAX_RESULTS_PER_TOPIC)
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Fetch arXiv papers for the knowledge graph.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument("--per-topic", type=int, default=MAX_RESULTS_PER_TOPIC,
+                        help="papers per topic")
+    parser.add_argument("--days", type=int, default=DAYS_BACK,
+                        help="only papers from the last N days; 0 = no limit")
+    parser.add_argument("--topics", default="",
+                        help="comma separated subset of topics, e.g. opd,moe")
+    parser.add_argument("--out", default="",
+                        help="output file name inside data/arxiv_raw")
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
+
+    wanted = [t.strip() for t in args.topics.split(",") if t.strip()]
+    unknown = [t for t in wanted if t not in TOPICS]
+    if unknown:
+        raise SystemExit(f"Unknown topic(s): {', '.join(unknown)}\nAvailable: {', '.join(TOPICS)}")
+    topics = {t: TOPICS[t] for t in wanted} if wanted else dict(TOPICS)
+
+    if args.per_topic < 1:
+        raise SystemExit("--per-topic must be at least 1")
+    days_back = None if args.days in (0, -1) else args.days
+
+    requests = -(-args.per_topic // PAGE_SIZE)
+    estimate_min = len(topics) * (requests * DELAY_SECONDS + SLEEP_BETWEEN_TOPICS) / 60
+    print(f"Topics: {len(topics)}, target {args.per_topic} papers each "
+          f"= {len(topics) * args.per_topic} before de-duplication")
+    print(f"Time window: {'no limit' if days_back is None else f'last {days_back} days'}")
+    print(f"Estimated runtime: about {estimate_min:.0f} min (arXiv rate limit)")
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    output_file = OUTPUT_DIR / (args.out or f"papers_{timestamp}.json")
+
+    all_papers, seen_ids = [], set()
+
+    def save():
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(all_papers, f, ensure_ascii=False, indent=2)
+
+    for i, (topic_name, keywords) in enumerate(topics.items(), 1):
+        papers = fetch_papers(topic_name, keywords, args.per_topic, days_back)
+
+        new = 0
         for p in papers:
             if p["arxiv_id"] not in seen_ids:
                 seen_ids.add(p["arxiv_id"])
                 all_papers.append(p)
+                new += 1
+        print(f"  {new} new unique papers ({len(papers) - new} already seen in earlier topics)")
 
-        print(f"Waiting {SLEEP_BETWEEN_TOPICS} seconds before next topic...")
-        time.sleep(SLEEP_BETWEEN_TOPICS)
+        if SAVE_AFTER_EACH_TOPIC:
+            save()
+            print(f"  Progress saved: {len(all_papers)} papers in {output_file}")
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    output_file = OUTPUT_DIR / f"papers_{timestamp}.json"
+        if i < len(topics):
+            print(f"Waiting {SLEEP_BETWEEN_TOPICS} seconds before next topic...")
+            time.sleep(SLEEP_BETWEEN_TOPICS)
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(all_papers, f, ensure_ascii=False, indent=2)
+    save()
 
     print("\n" + "=" * 50)
     print(f"All done! Total unique papers fetched: {len(all_papers)}")
@@ -245,6 +297,24 @@ def main():
     print("\nPapers per topic:")
     for t, c in topic_count.most_common():
         print(f"  {t}: {c}")
+
+    if all_papers:
+        years = Counter(p["published"][:4] for p in all_papers)
+        print("\nPapers per year:")
+        for y, c in sorted(years.items()):
+            print(f"  {y}: {c}")
+        print(f"\nPublication range: {min(p['published'] for p in all_papers)[:10]}"
+              f" .. {max(p['published'] for p in all_papers)[:10]}")
+
+    target = len(topics) * args.per_topic
+    if len(all_papers) < target:
+        thin = [t for t in topics if topic_count.get(t, 0) < args.per_topic]
+        print(f"\nNote: asked for {target} papers, got {len(all_papers)} unique. "
+              f"The difference comes from duplicates across topics and keyword coverage.")
+        if thin:
+            print("Below target: " + ", ".join(thin))
+            print("Widen those topics' keyword lists, or raise --days to include older papers.")
+
 
 if __name__ == "__main__":
     main()

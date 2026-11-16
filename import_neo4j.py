@@ -113,7 +113,7 @@ def main():
     importer = Neo4jImporter()
     try:
         importer.run(cleaned)
-        print("\n[Done] Import complete! 打开浏览器访问 http://localhost:7474 查看图谱。")
+        print("\n[Done] Import complete! open http://localhost:7474 to see the graphs")
     finally:
         importer.close()
 
