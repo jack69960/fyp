@@ -10,6 +10,12 @@ QUICK START
     python -m pip install -U pip
     python -m pip install -r requirements.txt
 
+If `python` is not on PATH (Windows Store placeholder, or Anaconda installed
+without PATH), call your interpreter by full path instead, for example:
+
+    D:\anacoda\python.exe -m venv .venv
+    .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
 Then start everything with the one-click launcher:
 
     start-app.bat
@@ -28,7 +34,9 @@ To start the app manually instead:
 PREREQUISITES
 -------------
   * Windows 10/11, PowerShell
-  * Python 3.10+ (this project was developed on 3.13)
+  * Python 3.12+ (developed on 3.13). The pinned numpy 2.5.x and pandas 3.0.x
+    do not install on older interpreters; if you only have 3.11 or lower,
+    relax those two pins in requirements.txt.
   * Neo4j 5.x Community — optional. Without a database the app automatically
     falls back to the bundled snapshot (data/graph_export.json) and still runs.
   * Ollama — only needed if you want to re-extract triples with the local LLM.
